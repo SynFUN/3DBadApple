@@ -36,8 +36,7 @@
         "defaultJavaPath": "C:\\Program Files\\Java\\jre1.8.0_65\\bin\\java.exe"
       },
       "gameDir": "【整合包】【自建】1.12.2自然环境综合优化\\【2.0】UI版WE协调兼容优化整合\\.minecraft",
-      "useRelativePath": true,
-      "selectedMinecraftVersion": "1.12.2"
+      "useRelativePath": true
     }
   },
   "accounts": [
