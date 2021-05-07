@@ -686,26 +686,6 @@
       "minimumLauncherVersion": 18
     },
     {
-      "id": "optifine",
-      "version": "HD_U_F5",
-      "priority": 10000,
-      "arguments": {
-        "game": [
-          "--tweakClass",
-          "optifine.OptiFineTweaker"
-        ]
-      },
-      "mainClass": "net.minecraft.launchwrapper.Launch",
-      "libraries": [
-        {
-          "name": "optifine:OptiFine:1.12.2_HD_U_F5"
-        },
-        {
-          "name": "optifine:launchwrapper-of:2.1"
-        }
-      ]
-    },
-    {
       "id": "forge",
       "version": "14.23.5.2779",
       "priority": 30000,
