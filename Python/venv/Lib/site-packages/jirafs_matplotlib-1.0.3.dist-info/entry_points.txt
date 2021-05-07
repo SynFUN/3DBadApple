@@ -1,0 +1,3 @@
+[jirafs_plugins]
+matplotlib = jirafs_matplotlib.plugin:Matplotlib
+
