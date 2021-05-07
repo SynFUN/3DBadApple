@@ -1,5 +1,5 @@
 {
-  "last": "Final",
+  "last": "FinalD",
   "backgroundType": "DEFAULT",
   "commonDirType": "DEFAULT",
   "commonpath": "C:\\Users\\Administrator\\AppData\\Roaming\\.minecraft",
@@ -36,6 +36,33 @@
         "defaultJavaPath": "C:\\Program Files\\Java\\jdk1.8.0_101\\jre\\bin\\java.exe"
       },
       "gameDir": "C:\\Users\\Admin\\Documents\\GitHub\\MC\\【整合包】【自建】1.12.2自然环境综合优化【2.0】\\.minecraft",
+      "useRelativePath": false
+    },
+    "FinalD": {
+      "global": {
+        "usesGlobal": true,
+        "javaArgs": "",
+        "minecraftArgs": "",
+        "maxMemory": 8192,
+        "permSize": "",
+        "width": 854,
+        "height": 480,
+        "javaDir": "",
+        "precalledCommand": "",
+        "serverIp": "",
+        "java": "1.8.0_152",
+        "wrapper": "",
+        "fullscreen": false,
+        "noJVMArgs": false,
+        "notCheckGame": false,
+        "notCheckJVM": false,
+        "showLogs": false,
+        "gameDir": "",
+        "launcherVisibility": 1,
+        "gameDirType": 0,
+        "defaultJavaPath": "C:\\Program Files\\Java\\jdk1.8.0_152\\jre\\bin\\java.exe"
+      },
+      "gameDir": "D:\\User\\Administrator\\Documents\\GitHub\\MC\\【整合包】【自建】1.12.2自然环境综合优化【2.0】\\.minecraft",
       "useRelativePath": false,
       "selectedMinecraftVersion": "1.12.2"
     }
