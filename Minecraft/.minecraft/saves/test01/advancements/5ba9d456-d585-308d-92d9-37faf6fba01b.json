@@ -23,15 +23,15 @@
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/gray_concrete_powder": {
-    "criteria": {
-      "has_sand": "2021-05-07 18:32:43 +0800"
-    },
-    "done": true
-  },
   "minecraft:recipes/transportation/dark_oak_boat": {
     "criteria": {
       "entered_water": "2021-05-07 18:27:41 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/gray_concrete_powder": {
+    "criteria": {
+      "has_sand": "2021-05-07 18:32:43 +0800"
     },
     "done": true
   },
@@ -63,7 +63,10 @@
     "criteria": {
       "deep_ocean": "2021-05-07 18:25:40 +0800",
       "beaches": "2021-05-07 18:25:38 +0800",
-      "plains": "2021-05-07 18:25:28 +0800"
+      "plains": "2021-05-07 18:25:28 +0800",
+      "ocean": "2021-05-10 23:26:02 +0800",
+      "roofed_forest": "2021-05-10 23:26:38 +0800",
+      "river": "2021-05-10 23:26:20 +0800"
     },
     "done": false
   },
