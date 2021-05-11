@@ -5,13 +5,11 @@
  * @Software : IntelliJ IDEA
  * https://github.com/SynthesisDu
  */
-package TEST;
 
 import org.python.util.PythonInterpreter;
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 
-public class ConnectToPython {
+public class Jython {
     public static String getPathOfPythonFile() {
         File directory = new File("");
         String path = null;
@@ -34,6 +32,11 @@ public class ConnectToPython {
     }
     public static void runPythonMcpi() {
         String fileName = getPathOfPythonFile() + "\\Mcpi.py";
+        PythonInterpreter pyFile = new PythonInterpreter();
+        pyFile.execfile(fileName);
+    }
+    public void pyServer() throws IOException{
+        String fileName = getPathOfPythonFile() + "\\TCPSever.py";
         PythonInterpreter pyFile = new PythonInterpreter();
         pyFile.execfile(fileName);
     }

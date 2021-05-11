@@ -5,7 +5,9 @@
  * @Software : IntelliJ IDEA
  * https://github.com/SynthesisDu
  */
-package TEST;
 
-public class TransVedioToImg {
+public class TransVideoToImg {
+    public static void main(String[] args) {
+        Jython.runPythonMcpi();
+    }
 }

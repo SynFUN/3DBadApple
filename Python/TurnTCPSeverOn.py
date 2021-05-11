@@ -1,12 +1,12 @@
 # -*- coding = utf-8 -*-
 # encoding: utf-8
-# @Time : 2021.5.11 10:37
+# @Time : 2021.5.11 15:09
 # @Author : Synthesis 杜品赫
-# @File : Mcpi.py
+# @File : TurnTCPSeverOn.py
 # @Software : PyCharm
 # https://github.com/SynthesisDu/MC_BadAppleDGDH
 
 import os
 
 if __name__ == '__main__':
-    print("This is Mcpi.py")
+    os.system('TCPSever.py')
