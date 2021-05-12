@@ -8,10 +8,10 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" name="KotlinJavaRuntime" level="project" />
-    <orderEntry type="module-library" exported="">
+    <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../Modules/jython-2.7.2/jython-standalone-2.7.2.jar!/" />
+          <root url="jar://$MODULE_DIR$/../InstallFirst/jython-2.7.2/jython-standalone-2.7.2.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
