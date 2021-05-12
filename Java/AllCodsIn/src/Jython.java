@@ -41,4 +41,9 @@ public class Jython {
         PythonInterpreter pyFile = new PythonInterpreter();
         pyFile.execfile(fileName);
     }
+    public static void runPythonImgToArray() {
+        String fileName = getPathOfPythonFile() + "\\ImgToArray.py";
+        PythonInterpreter pyFile = new PythonInterpreter();
+        pyFile.execfile(fileName);
+    }
 }

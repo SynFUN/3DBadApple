@@ -17,8 +17,27 @@
 import java.io.*;
 import java.sql.Time;
 import java.util.*;
+import javax.swing.*;
 
 
 public class Ffmpeg {
-
+    // ffprobe -select_streams v -show_entries format=size -show_streams -v quiet -of csv="p=0" -of json -i C:\Users\Admin\Documents\GitHub\BadApple.mp4
+    public static void main(String[] args) {
+        try {
+            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (UnsupportedLookAndFeelException e) {
+            e.printStackTrace();
+        }
+        JFileChooser fd = new JFileChooser();
+        //fd.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+        fd.showOpenDialog(null);
+        File f = fd.getSelectedFile();
+        if(f != null){}
+    }
 }

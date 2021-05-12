@@ -3,8 +3,6 @@ from tkinter import filedialog
 from PIL import Image
 import numpy
 
-# 以上代码报错，表示相应的包未安装
-
 def runLoop():
     inPix1 = str(num1Entry.get())
     inPix2 = str(num2Entry.get())
