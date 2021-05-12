@@ -9,4 +9,4 @@
 import os
 
 if __name__ == '__main__':
-    print("This is Mcpi.py")
+    print("Mcpi.py:")

@@ -1,9 +1,9 @@
 /**
  * @Time : 2021.5.11 10:40
  * @Author : Synthesis 杜品赫
- * @File : ConnectToPython
+ * @File : Jython.java
  * @Software : IntelliJ IDEA
- * https://github.com/SynthesisDu
+ * https://github.com/SynthesisDu/MC_BadAppleDGDH
  */
 
 import org.python.util.PythonInterpreter;
@@ -21,7 +21,7 @@ public class Jython {
         }
 
         if (path == null) {
-            path = "Error:CannotGetRightPath";
+            path = "Error:CannotGetRightPath(Jython.getPathOfPythonFile())";
         } else {
             int temp = path.length();
             temp -= 4;
@@ -32,11 +32,6 @@ public class Jython {
     }
     public static void runPythonMcpi() {
         String fileName = getPathOfPythonFile() + "\\Mcpi.py";
-        PythonInterpreter pyFile = new PythonInterpreter();
-        pyFile.execfile(fileName);
-    }
-    public void pyServer() throws IOException{
-        String fileName = getPathOfPythonFile() + "\\TCPSever.py";
         PythonInterpreter pyFile = new PythonInterpreter();
         pyFile.execfile(fileName);
     }
