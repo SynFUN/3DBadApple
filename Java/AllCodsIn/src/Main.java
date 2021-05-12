@@ -3,7 +3,7 @@
  * @Author : Synthesis 杜品赫
  * @File : Main.java
  * @Software : IntelliJ IDEA 2020.3.4
- * @JDK : 1.8.0_101
+ * @JDK : 1.8.0
  * https://github.com/SynthesisDu/MC_BadAppleDGDH
  */
 

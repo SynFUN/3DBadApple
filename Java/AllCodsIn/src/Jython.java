@@ -3,13 +3,13 @@
  * @Author : Synthesis 杜品赫
  * @File : Jython.java
  * @Software : IntelliJ IDEA 2020.3.4
- * @JDK : 1.8.0_101
+ * @JDK : 1.8.0
  * https://github.com/SynthesisDu/MC_BadAppleDGDH
  * -----------------------------------------------
  * One extra environmental require : Jython.jar
- *//*
-  You need to add a JAR from [MC_BadAppleDGDH\Java\InstallFirst\jython-2.7.2] to your compiler.
-  你需要从【MC_BadAppleDGDH\Java\InstallFirst\jython-2.7.2】这个文件夹添加一个JAR到你的编译器。
+ * -----------------------------------------------
+ * You need to add a JAR from [MC_BadAppleDGDH\Java\InstallFirst\jython-2.7.2] to your compiler.
+ * 你需要从【MC_BadAppleDGDH\Java\InstallFirst\jython-2.7.2】这个文件夹添加一个JAR到你的编译器。
  */
 
 import org.python.util.PythonInterpreter;
