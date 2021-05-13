@@ -15,34 +15,33 @@
 import org.python.util.PythonInterpreter;
 import java.io.*;
 
+/**
+ * 此类负责运行Python文件
+ *
+ * @author Synthesis 杜品赫
+ *
+ * @apiNote Jython.jar
+ */
 public class Jython {
-    public static String getPathOfPythonFile() {
-        File directory = new File("");
-        String path = null;
-
-        try {
-            path = directory.getCanonicalPath();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        if (path == null) {
-            path = "Error:CannotGetRightPath(Jython.getPathOfPythonFile())";
-        } else {
-            int temp = path.length();
-            temp -= 4;
-            path = path.substring(0,temp);
-            path += "Python";
-        }
-        return path;
-    }
+    /**
+     * 此方法将运行项目的另一路径中的Python文件：Python\Mcpi.py
+     * <This method will run the Python file in another path: Python\McPi.py>
+     *
+     * @see Path#pathPythonFile()
+     */
     public static void runPythonMcpi() {
-        String fileName = getPathOfPythonFile() + "\\Mcpi.py";
+        String fileName = Path.pathPythonFile() + "\\Mcpi.py";
         PythonInterpreter pyFile = new PythonInterpreter();
         pyFile.execfile(fileName);
     }
+    /**
+     * 此方法将运行项目的另一路径中的Python文件：Python\ImgToArray.py
+     * <This method will run the Python file in another path: Python\ImgToArray.py>
+     *
+     * @see Path#pathPythonFile()
+     */
     public static void runPythonImgToArray() {
-        String fileName = getPathOfPythonFile() + "\\ImgToArray.py";
+        String fileName = Path.pathPythonFile() + "\\ImgToArray.py";
         PythonInterpreter pyFile = new PythonInterpreter();
         pyFile.execfile(fileName);
     }
