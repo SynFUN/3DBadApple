@@ -29,11 +29,56 @@ import java.io.*;
  * @apiNote add FFmpeg to path environment variable
  */
 public class FFmpeg {
-    // C:\Users\Admin\Documents\GitHub\BadApple.mp4
 
-    public static void main(String[] args) throws IOException, InterruptedException {
-        String cmd = "ffprobe -select_streams v -show_entries format=size -show_streams -v quiet -of csv=\"p=0\" -of json -i " + Path.pathChooseVideo() + " > " + Path.pathBinFolder() + "v.log";
-        File bat = new File(Path.pathBinFolder() + "v.log");
+    public static void main(String[] args) {
+        FFmpeg ffmpeg = new FFmpeg();
+        if (ffmpeg.editBat() && ffmpeg.runBat(Path.pathBinFolder() + "\\ffs.bat")) {
+            System.out.println("succeed");
+        } else {
+            System.out.println("error");
+        }
+    }
+
+    public boolean editBat() {
+        // 准备要存入ffs.bat的cmd命令
+        String cmd = "ffprobe -select_streams v -show_entries format=size -show_streams -v quiet -of csv=\"p=0\" -of json -i " + Path.pathChooseVideo() + " > " + Path.pathBinFolder() + "\\v.log";
+        // 存入命令道ffs.bat
+        try {
+            File bat = new File(Path.pathBinFolder() + "\\ffs.bat");
+            BufferedWriter out = new BufferedWriter(new FileWriter(bat));
+            out.write(cmd); // \r\n即为换行
+            out.flush(); // 把缓存区内容压入文件
+            out.close();
+        } catch (Exception e) {
+            // Error：无法正常的编辑ffs.bat
+            System.out.print("Error:CannotEditFile[ffs.bat]=");
+            e.printStackTrace();
+            return false;
+        }
+        return true;
+    }
+
+    public boolean runBat(String batPath) {
+        return true;
+    }
+
+    public void readLog() {
+        try {
+            File log = new File(Path.pathBinFolder() + "\\v.log");
+            InputStreamReader inputStreamReader = new InputStreamReader(new FileInputStream(log)); // 建立一个输入流对象reader
+            BufferedReader bufferedReader = new BufferedReader(inputStreamReader); // 建立一个对象，它把文件内容转成计算机能读懂的语言
+            String line = bufferedReader.readLine();
+            ArrayList<String> allInLog = new ArrayList<>();
+            while (line != null) {
+                line = bufferedReader.readLine(); // 一次读入一行数据
+                allInLog.add(line);
+            }
+            System.out.println(allInLog);
+        } catch (Exception e) {
+            // Error：无法正常的读取v.log
+            System.out.print("Error:CannotReadFile[v.log]=");
+            e.printStackTrace();
+        }
     }
 }
 
