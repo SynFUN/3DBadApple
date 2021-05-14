@@ -18,7 +18,7 @@ import java.io.*;
 /**
  * 此类负责运行Python文件
  *
- * @author Synthesis 杜品赫
+ * @author Synthesis 杜品赫 <https://github.com/SynthesisDu>
  *
  * @apiNote Jython.jar
  */

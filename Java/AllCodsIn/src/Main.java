@@ -9,6 +9,11 @@
 
 public class Main {
     public static void main(String[] args) {
-        Jython.runPythonImgToArray();
+        FFmpeg ffmpeg = new FFmpeg();
+        if (ffmpeg.editBat() && ffmpeg.runBat(Path.pathBinFolder() + "\\ffs.bat")) {
+            System.out.println("succeed");
+        } else {
+            System.out.println("error");
+        }
     }
 }

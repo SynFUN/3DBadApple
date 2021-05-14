@@ -15,7 +15,7 @@ import java.io.IOException;
 /**
  * 此类专门提供本项目所需的生成相关路径的方法
  *
- * @author Synthesis 杜品赫
+ * @author Synthesis 杜品赫 <https://github.com/SynthesisDu>
  *
  * @see #pathMainFile()
  * @see #pathPythonFile()
@@ -41,13 +41,13 @@ public class Path {
             path = fileFolder.getCanonicalPath();
         } catch (IOException e) {
             // Error：File类的getCanonicalPath()运行异常
-            System.out.print("Error:File.getCanonicalPath()Error=");
+            System.out.print("# Error:File.getCanonicalPath()Error=");
             e.printStackTrace();
         }
         // 检查以上是否已经正确运行 path是否被赋值
         if (path == null) {
             // Error：无法获取到正确的路径
-            path = "Error:CannotGetRightPath(Jython.getPathOfPythonFile())";
+            path = "# Error:CannotGetRightPath(Jython.getPathOfPythonFile())";
         } else {
             path = path.substring(0,path.length()-5);
         }
@@ -93,6 +93,7 @@ public class Path {
      * @return 选择的视频文件的路径
      *
      * @see #pathDesktop()
+     * @see Rename#Rename(String)
      */
     public static String pathChooseVideo() {
         // 在创建选择器对象前修改选择器界面风格 否则选择器初始风格太丑
@@ -101,7 +102,7 @@ public class Path {
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
         } catch (IllegalAccessException | UnsupportedLookAndFeelException | ClassNotFoundException | InstantiationException e) {
             // Error：无法改变文件选择器的风格
-            System.out.print("Error:CannotChangeFileChooserStyle=");
+            System.out.print("# Error:CannotChangeFileChooserStyle=");
             e.printStackTrace();
         }
         // 创建文件选择器对象（参数设定选择器初始位置在用户桌面）

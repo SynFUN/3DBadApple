@@ -16,32 +16,26 @@
  * 如果中文产生乱码，编译器相关编码设置调整为GBK即可
  */
 
-import javax.swing.*;
-import javax.swing.filechooser.FileSystemView;
+import java.awt.*;
 import java.util.*;
 import java.io.*;
 
 /**
  * 此类负责操作FFmpeg工具处理视频文件
  *
- * @author Synthesis 杜品赫
+ * @author Synthesis 杜品赫 <https://github.com/SynthesisDu>
  *
  * @apiNote add FFmpeg to path environment variable
  */
 public class FFmpeg {
 
-    public static void main(String[] args) {
-        FFmpeg ffmpeg = new FFmpeg();
-        if (ffmpeg.editBat() && ffmpeg.runBat(Path.pathBinFolder() + "\\ffs.bat")) {
-            System.out.println("succeed");
-        } else {
-            System.out.println("error");
-        }
-    }
+    public Rename video;
 
     public boolean editBat() {
+        video = new Rename(Path.pathChooseVideo());
+        video.setName();
         // 准备要存入ffs.bat的cmd命令
-        String cmd = "ffprobe -select_streams v -show_entries format=size -show_streams -v quiet -of csv=\"p=0\" -of json -i " + Path.pathChooseVideo() + " > " + Path.pathBinFolder() + "\\v.log";
+        String cmd = "ffprobe -select_streams v -show_entries format=size -show_streams -v quiet -of csv=\"p=0\" -of json -i " + video.getNowFilePath() + " > " + Path.pathBinFolder() + "\\v.log";
         // 存入命令道ffs.bat
         try {
             File bat = new File(Path.pathBinFolder() + "\\ffs.bat");
@@ -51,7 +45,7 @@ public class FFmpeg {
             out.close();
         } catch (Exception e) {
             // Error：无法正常的编辑ffs.bat
-            System.out.print("Error:CannotEditFile[ffs.bat]=");
+            System.out.print("# Error:CannotEditFile[ffs.bat]=");
             e.printStackTrace();
             return false;
         }
@@ -59,6 +53,12 @@ public class FFmpeg {
     }
 
     public boolean runBat(String batPath) {
+        try {
+            Desktop.getDesktop().open(new File(video.getNowFilePath()));
+        } catch (IOException e) {
+            e.printStackTrace();
+            return false;
+        }
         return true;
     }
 
@@ -76,9 +76,8 @@ public class FFmpeg {
             System.out.println(allInLog);
         } catch (Exception e) {
             // Error：无法正常的读取v.log
-            System.out.print("Error:CannotReadFile[v.log]=");
+            System.out.print("# Error:CannotReadFile[v.log]=");
             e.printStackTrace();
         }
     }
 }
-
