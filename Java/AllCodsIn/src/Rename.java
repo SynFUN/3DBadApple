@@ -18,7 +18,7 @@ public class Rename {
         p = file.getAbsolutePath().replaceAll(file.getName(), "");
         path = p;
         originName = file.getName();
-        nowName = originName;
+        nowName = file.getName();
     }
 
     public String getOriginName() { return originName; }
@@ -30,7 +30,7 @@ public class Rename {
     public String getNowFilePath() { return path + nowName; }
 
     public void setName() {
-        String newName = "";
+        String newName = nowName;
         System.out.println("@ Check if video name illegal that needs to rename");
         if (nowName.length() > 12 || nowName.contains(" ")) {
             newName = (nowName.substring(0,8).replaceAll(" ", "") + ".mp4");
@@ -44,6 +44,7 @@ public class Rename {
             File newFile = new File(path + newName);
             System.out.print("@ Renamed: ");
             System.out.println(oldFile.renameTo(newFile));
+            nowName = newName;
         } else System.out.println("# Error:NewNameSameWithOldName");
     }
 

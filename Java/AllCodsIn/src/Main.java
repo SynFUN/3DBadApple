@@ -11,9 +11,9 @@ public class Main {
     public static void main(String[] args) {
         FFmpeg ffmpeg = new FFmpeg();
         if (ffmpeg.editBat() && ffmpeg.runBat(Path.pathBinFolder() + "\\ffs.bat")) {
-            System.out.println("succeed");
+            System.out.println("@ [v.log] formed succeed");
         } else {
-            System.out.println("error");
+            System.out.println("@ [v.log] formed error");
         }
     }
 }

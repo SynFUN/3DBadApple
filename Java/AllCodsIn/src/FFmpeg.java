@@ -35,6 +35,7 @@ public class FFmpeg {
         video = new Rename(Path.pathChooseVideo());
         video.setName();
         // 准备要存入ffs.bat的cmd命令
+        System.out.println(video.getNowFilePath());
         String cmd = "ffprobe -select_streams v -show_entries format=size -show_streams -v quiet -of csv=\"p=0\" -of json -i " + video.getNowFilePath() + " > " + Path.pathBinFolder() + "\\v.log";
         // 存入命令道ffs.bat
         try {
@@ -54,7 +55,7 @@ public class FFmpeg {
 
     public boolean runBat(String batPath) {
         try {
-            Desktop.getDesktop().open(new File(video.getNowFilePath()));
+            Desktop.getDesktop().open(new File(batPath));
         } catch (IOException e) {
             e.printStackTrace();
             return false;

@@ -1,0 +1,10 @@
+README.rst
+setup.cfg
+setup.py
+minecraftstuff/__init__.py
+minecraftstuff/minecraftstuff.py
+minecraftstuff.egg-info/PKG-INFO
+minecraftstuff.egg-info/SOURCES.txt
+minecraftstuff.egg-info/dependency_links.txt
+minecraftstuff.egg-info/not-zip-safe
+minecraftstuff.egg-info/top_level.txt
