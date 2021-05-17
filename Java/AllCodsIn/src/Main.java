@@ -12,9 +12,12 @@ public class Main {
         FFmpeg ffmpeg = new FFmpeg();
         if (ffmpeg.batFFS() && ffmpeg.runBat(Path.pathBinFolder() + "\\ffs.bat")) {
             System.out.println("@ [v.log] formed succeed");
-        } else { System.out.println("@ [v.log] formed error"); }
+        } else { System.out.println("# Error : [v.log]FormedError"); }
         ffmpeg.readLog();
         System.out.println("@ width : " + ffmpeg.getWidthInt());
         System.out.println("@ height : " + ffmpeg.getHeightInt());
+        if (ffmpeg.batFFR() && ffmpeg.runBat(Path.pathBinFolder() + "\\ffr.bat")) {
+            System.out.println("@ MP4 to PNG formed succeed");
+        } else { System.out.println("# Error : MP4ToPNGFormedError"); }
     }
 }

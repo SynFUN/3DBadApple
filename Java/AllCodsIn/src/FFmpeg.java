@@ -16,8 +16,6 @@
  * 如果中文产生乱码，编译器相关编码设置调整为GBK即可
  */
 
-import jnr.ffi.annotations.In;
-
 import java.awt.*;
 import java.util.*;
 import java.io.*;
@@ -52,14 +50,13 @@ public class FFmpeg {
     public boolean batFFS() {
         video.setName();
         // 准备要存入ffs.bat的cmd命令
-        System.out.println(video.getNowFilePath());
         String cmd = "ffprobe -select_streams v -show_entries format=size -show_streams -v quiet -of csv=\"p=0\" -of json -i " + video.getNowFilePath() + " > " + Path.pathBinFolder() + "\\v.log";
         // 存入命令道ffs.bat
         try {
             File bat = new File(Path.pathBinFolder() + "\\ffs.bat");
             BufferedWriter out = new BufferedWriter(new FileWriter(bat));
-            out.write(cmd); // \r\n即为换行
-            out.flush(); // 把缓存区内容压入文件
+            out.write(cmd);
+            out.flush();
             out.close();
         } catch (Exception e) {
             // Error：无法正常的编辑ffs.bat
@@ -70,8 +67,69 @@ public class FFmpeg {
         return true;
     }
 
-    public void batFFR() {
+    public boolean batFFR() {
+        // 准备要存入ffr.bat的cmd命令
+        String cmd = "ffmpeg -i " + video.getNowFilePath() + " -r 8 " + video.getPath() + "%%05d.png";
+        System.out.println(cmd);
+        // 存入命令道ffr.bat
+        try {
+            File bat = new File(Path.pathBinFolder() + "\\ffr.bat");
+            BufferedWriter out = new BufferedWriter(new FileWriter(bat));
+            out.write(cmd);
+            out.flush();
+            out.close();
+        } catch (Exception e) {
+            // Error：无法正常的编辑ffs.bat
+            System.out.print("# Error : CannotEditFile[ffr.bat]=");
+            e.printStackTrace();
+            return false;
+        }
+        return true;
+    }
 
+    public void readLog() {
+        // 用来存储遍历的所有文件内的内容
+        ArrayList<String> allInLog = new ArrayList<>();
+        try {
+            // 打开[v.log]到一个File对象
+            File log = new File(Path.pathBinFolder() + "\\v.log");
+            // 建立一个read buffer对象（建立一个输入流对象（建立File输入流对象（File对象）））
+            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(new FileInputStream(log)));
+            // 建立一个字符串用来遍历文件的每一行 (D)-C
+            String line = bufferedReader.readLine();
+            // 遍历文件
+            while (line != null) {
+                // 读入一行数据
+                line = bufferedReader.readLine();
+                allInLog.add(line);
+            }
+        } catch (Exception e) {
+            // Error：无法正常的读取v.log
+            System.out.print("# Error : CannotReadFile[v.log]=");
+            e.printStackTrace();
+        }
+        // 从遍历的所有内容中获取codecName
+        int codecNameIndex = allInLog.toString().indexOf("\"codec_name\": ");
+        String codecNameString = allInLog.toString().substring(codecNameIndex, codecNameIndex + 20);
+        codecNameString = codecNameString.replaceAll("\"codec_name\": ", "");
+        codecNameString = codecNameString.replaceAll(",", "");
+        codecNameString = codecNameString.replaceAll(" ", "");
+        codecNameString = codecNameString.replaceAll("\"", "");
+        codecName = codecNameString;
+        // 从遍历的所有内容中获取width
+        int widthIndex = allInLog.toString().indexOf("\"width\": ");
+        String widthString = allInLog.toString().substring(widthIndex, widthIndex + 20);
+        widthString = widthString.replaceAll("\"width\": ", "");
+        widthString = widthString.replaceAll(",", "");
+        widthString = widthString.replaceAll(" ", "");
+        widthInt = new Integer(widthString);
+        // 从遍历的所有内容中获取height
+        int heightIndex = allInLog.toString().indexOf("\"height\": ");
+        String heightString = allInLog.toString().substring(heightIndex, heightIndex + 20);
+        heightString = heightString.replace("\"height\": ", "");
+        heightString = heightString.replaceAll(",", "");
+        heightString = heightString.replaceAll(" ", "");
+        heightInt = new Integer(heightString);
     }
 
     public boolean runBat(String batPath) {
@@ -82,48 +140,5 @@ public class FFmpeg {
             return false;
         }
         return true;
-    }
-
-    public void readLog() {
-        ArrayList<String> allInLog = new ArrayList<>();
-        try {
-            File log = new File(Path.pathBinFolder() + "\\v.log");
-            // 建立一个输入流对象
-            InputStreamReader inputStreamReader = new InputStreamReader(new FileInputStream(log));
-            // 建立一个read buffer对象
-            BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
-            String line = bufferedReader.readLine();
-            while (line != null) {
-                line = bufferedReader.readLine(); // 一次读入一行数据
-                allInLog.add(line);
-            }
-        } catch (Exception e) {
-            // Error：无法正常的读取v.log
-            System.out.print("# Error : CannotReadFile[v.log]=");
-            e.printStackTrace();
-        }
-        System.out.println(allInLog);
-        // 获取codecName
-        int codecNameIndex = allInLog.toString().indexOf("\"codec_name\": ");
-        String codecNameString = allInLog.toString().substring(codecNameIndex, codecNameIndex + 20);
-        codecNameString = codecNameString.replaceAll("\"codec_name\": ", "");
-        codecNameString = codecNameString.replaceAll(",", "");
-        codecNameString = codecNameString.replaceAll(" ", "");
-        codecNameString = codecNameString.replaceAll("\"", "");
-        codecName = codecNameString;
-        // 获取width
-        int widthIndex = allInLog.toString().indexOf("\"width\": ");
-        String widthString = allInLog.toString().substring(widthIndex, widthIndex + 20);
-        widthString = widthString.replaceAll("\"width\": ", "");
-        widthString = widthString.replaceAll(",", "");
-        widthString = widthString.replaceAll(" ", "");
-        widthInt = new Integer(widthString);
-        // 获取height
-        int heightIndex = allInLog.toString().indexOf("\"height\": ");
-        String heightString = allInLog.toString().substring(heightIndex, heightIndex + 20);
-        heightString = heightString.replace("\"height\": ", "");
-        heightString = heightString.replaceAll(",", "");
-        heightString = heightString.replaceAll(" ", "");
-        heightInt = new Integer(heightString);
     }
 }

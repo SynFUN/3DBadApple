@@ -15,7 +15,8 @@ import java.io.IOException;
 /**
  * 此类专门提供本项目所需的生成相关路径的方法
  *
- * @author Synthesis 杜品赫 <https://github.com/SynthesisDu>
+ * @author Synthesis 杜品赫
+ * <https://github.com/SynthesisDu>
  *
  * @see #pathMainFile()
  * @see #pathPythonFile()

@@ -33,19 +33,19 @@ public class Rename {
         String newName = nowName;
         System.out.println("@ Check if video name illegal that needs to rename");
         if (nowName.length() > 12 || nowName.contains(" ")) {
-            newName = (nowName.substring(0,8).replaceAll(" ", "") + ".mp4");
+            newName = (nowName.substring(0, 8).replaceAll(" ", "") + ".mp4");
             System.out.println("@ Rename video file to became legal");
             System.out.println("@ Path : " + path);
             System.out.println("@ From [" + nowName + "] To [" + newName + "]");
+            // 如果新文件名与原来不同就执行
+            if (!newName.equals(nowName)) {
+                File oldFile = new File(path + nowName);
+                File newFile = new File(path + newName);
+                System.out.print("@ Renamed : ");
+                System.out.println(oldFile.renameTo(newFile));
+                nowName = newName;
+            } else System.out.println("# Error : NewNameSameWithOldName");
         }
-        // 如果新文件名与原来不同就执行
-        if (!newName.equals(nowName)) {
-            File oldFile = new File(path + nowName);
-            File newFile = new File(path + newName);
-            System.out.print("@ Renamed : ");
-            System.out.println(oldFile.renameTo(newFile));
-            nowName = newName;
-        } else System.out.println("# Error : NewNameSameWithOldName");
     }
 
     public void restoreName() {
