@@ -16,6 +16,8 @@
  * 如果中文产生乱码，编译器相关编码设置调整为GBK即可
  */
 
+import jnr.ffi.annotations.In;
+
 import java.awt.*;
 import java.util.*;
 import java.io.*;
@@ -29,10 +31,25 @@ import java.io.*;
  */
 public class FFmpeg {
 
-    public Rename video;
+    public final Rename video;
+    private int widthInt;
+    private int heightInt;
+    private String codecName;
 
-    public boolean editBat() {
+    public FFmpeg() {
         video = new Rename(Path.pathChooseVideo());
+        widthInt = -1;
+        heightInt = -1;
+        codecName = "";
+    }
+
+    public int getWidthInt() { return widthInt; }
+
+    public int getHeightInt() { return heightInt; }
+
+    public String getCodecName() { return codecName; }
+
+    public boolean batFFS() {
         video.setName();
         // 准备要存入ffs.bat的cmd命令
         System.out.println(video.getNowFilePath());
@@ -46,11 +63,15 @@ public class FFmpeg {
             out.close();
         } catch (Exception e) {
             // Error：无法正常的编辑ffs.bat
-            System.out.print("# Error:CannotEditFile[ffs.bat]=");
+            System.out.print("# Error : CannotEditFile[ffs.bat]=");
             e.printStackTrace();
             return false;
         }
         return true;
+    }
+
+    public void batFFR() {
+
     }
 
     public boolean runBat(String batPath) {
@@ -64,21 +85,45 @@ public class FFmpeg {
     }
 
     public void readLog() {
+        ArrayList<String> allInLog = new ArrayList<>();
         try {
             File log = new File(Path.pathBinFolder() + "\\v.log");
-            InputStreamReader inputStreamReader = new InputStreamReader(new FileInputStream(log)); // 建立一个输入流对象reader
-            BufferedReader bufferedReader = new BufferedReader(inputStreamReader); // 建立一个对象，它把文件内容转成计算机能读懂的语言
+            // 建立一个输入流对象
+            InputStreamReader inputStreamReader = new InputStreamReader(new FileInputStream(log));
+            // 建立一个read buffer对象
+            BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
             String line = bufferedReader.readLine();
-            ArrayList<String> allInLog = new ArrayList<>();
             while (line != null) {
                 line = bufferedReader.readLine(); // 一次读入一行数据
                 allInLog.add(line);
             }
-            System.out.println(allInLog);
         } catch (Exception e) {
             // Error：无法正常的读取v.log
-            System.out.print("# Error:CannotReadFile[v.log]=");
+            System.out.print("# Error : CannotReadFile[v.log]=");
             e.printStackTrace();
         }
+        System.out.println(allInLog);
+        // 获取codecName
+        int codecNameIndex = allInLog.toString().indexOf("\"codec_name\": ");
+        String codecNameString = allInLog.toString().substring(codecNameIndex, codecNameIndex + 20);
+        codecNameString = codecNameString.replaceAll("\"codec_name\": ", "");
+        codecNameString = codecNameString.replaceAll(",", "");
+        codecNameString = codecNameString.replaceAll(" ", "");
+        codecNameString = codecNameString.replaceAll("\"", "");
+        codecName = codecNameString;
+        // 获取width
+        int widthIndex = allInLog.toString().indexOf("\"width\": ");
+        String widthString = allInLog.toString().substring(widthIndex, widthIndex + 20);
+        widthString = widthString.replaceAll("\"width\": ", "");
+        widthString = widthString.replaceAll(",", "");
+        widthString = widthString.replaceAll(" ", "");
+        widthInt = new Integer(widthString);
+        // 获取height
+        int heightIndex = allInLog.toString().indexOf("\"height\": ");
+        String heightString = allInLog.toString().substring(heightIndex, heightIndex + 20);
+        heightString = heightString.replace("\"height\": ", "");
+        heightString = heightString.replaceAll(",", "");
+        heightString = heightString.replaceAll(" ", "");
+        heightInt = new Integer(heightString);
     }
 }

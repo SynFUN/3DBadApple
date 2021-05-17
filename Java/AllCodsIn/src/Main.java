@@ -10,10 +10,11 @@
 public class Main {
     public static void main(String[] args) {
         FFmpeg ffmpeg = new FFmpeg();
-        if (ffmpeg.editBat() && ffmpeg.runBat(Path.pathBinFolder() + "\\ffs.bat")) {
+        if (ffmpeg.batFFS() && ffmpeg.runBat(Path.pathBinFolder() + "\\ffs.bat")) {
             System.out.println("@ [v.log] formed succeed");
-        } else {
-            System.out.println("@ [v.log] formed error");
-        }
+        } else { System.out.println("@ [v.log] formed error"); }
+        ffmpeg.readLog();
+        System.out.println("@ width : " + ffmpeg.getWidthInt());
+        System.out.println("@ height : " + ffmpeg.getHeightInt());
     }
 }

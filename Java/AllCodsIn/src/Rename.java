@@ -35,17 +35,17 @@ public class Rename {
         if (nowName.length() > 12 || nowName.contains(" ")) {
             newName = (nowName.substring(0,8).replaceAll(" ", "") + ".mp4");
             System.out.println("@ Rename video file to became legal");
-            System.out.println("@ Path: " + path);
+            System.out.println("@ Path : " + path);
             System.out.println("@ From [" + nowName + "] To [" + newName + "]");
         }
         // 如果新文件名与原来不同就执行
         if (!newName.equals(nowName)) {
             File oldFile = new File(path + nowName);
             File newFile = new File(path + newName);
-            System.out.print("@ Renamed: ");
+            System.out.print("@ Renamed : ");
             System.out.println(oldFile.renameTo(newFile));
             nowName = newName;
-        } else System.out.println("# Error:NewNameSameWithOldName");
+        } else System.out.println("# Error : NewNameSameWithOldName");
     }
 
     public void restoreName() {
@@ -62,8 +62,8 @@ public class Rename {
                     return;//重命名文件不存在
                 }
                 // 如果没有重名文件就执行
-                if (newFile.exists() || !newFile.renameTo(oldFile)) System.out.println("# Error:NewNameAlreadyBeenUsed");
-            } else System.out.println("# Error:NewNameSameWithOldName");
-        } else System.out.println("# Error:NameHaveNotBeenChanged");
+                if (newFile.exists() || !newFile.renameTo(oldFile)) System.out.println("# Error : NewNameAlreadyBeenUsed");
+            } else System.out.println("# Error : NewNameSameWithOldName");
+        } else System.out.println("# Error : NameHaveNotBeenChanged");
     }
 }

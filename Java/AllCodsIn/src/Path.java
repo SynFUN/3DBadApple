@@ -102,7 +102,7 @@ public class Path {
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
         } catch (IllegalAccessException | UnsupportedLookAndFeelException | ClassNotFoundException | InstantiationException e) {
             // Error：无法改变文件选择器的风格
-            System.out.print("# Error:CannotChangeFileChooserStyle=");
+            System.out.print("# Error : CannotChangeFileChooserStyle=");
             e.printStackTrace();
         }
         // 创建文件选择器对象（参数设定选择器初始位置在用户桌面）
@@ -136,7 +136,5 @@ public class Path {
      *
      * @see #pathPythonFile()
      */
-    public static String pathBinFolder() {
-        return pathPythonFile() + "\\bin";
-    }
+    public static String pathBinFolder() { return pathPythonFile() + "\\bin"; }
 }
