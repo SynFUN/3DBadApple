@@ -1,9 +1,10 @@
 /**
- * @Time : 2021.5.14 08:54
+ * @Time : 2021.5.11 10:41
  * @Author : Synthesis ¶ÅÆ·ºÕ
- * @File : Rename
- * @Software : IntelliJ IDEA
- * https://github.com/SynthesisDu
+ * @File : Rename.java
+ * @Software : IntelliJ IDEA 2020.3.4
+ * @JDK : 1.8.0
+ * https://github.com/SynthesisDu/MC_BadAppleDGDH
  */
 
 import java.io.File;
