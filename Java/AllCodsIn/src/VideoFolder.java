@@ -1,3 +1,5 @@
+import java.io.File;
+
 /**
  * @Time : 2021.5.11 10:41
  * @Author : Synthesis ¶ÅÆ·ºÕ
@@ -8,5 +10,8 @@
  */
 
 public class VideoFolder {
-    
+    private File originFile;
+    public VideoFolder(File f) {
+        if (f.exists()) originFile = f;
+    }
 }
