@@ -33,12 +33,15 @@ public class FFmpeg {
     private int widthInt;
     private int heightInt;
     private String codecName;
+    private String batPath;
 
     public FFmpeg() {
         video = new Rename(Path.pathChooseVideo());
+        video.setName();
         widthInt = -1;
         heightInt = -1;
         codecName = "";
+        batPath = "";
     }
 
     public int getWidthInt() { return widthInt; }
@@ -48,6 +51,7 @@ public class FFmpeg {
     public String getCodecName() { return codecName; }
 
     public boolean batFFS() {
+        batPath = Path.pathBinFolder() + "\\ffs.bat";
         video.setName();
         // 准备要存入ffs.bat的cmd命令
         String cmd = "ffprobe -select_streams v -show_entries format=size -show_streams -v quiet -of csv=\"p=0\" -of json -i " + video.getNowFilePath() + " > " + Path.pathBinFolder() + "\\v.log";
@@ -68,6 +72,7 @@ public class FFmpeg {
     }
 
     public boolean batFFR() {
+        batPath = Path.pathBinFolder() + "\\ffr.bat";
         // 准备要存入ffr.bat的cmd命令
         String cmd = "ffmpeg -i " + video.getNowFilePath() + " -r 8 " + video.getPath() + "%%05d.png";
         System.out.println(cmd);
@@ -132,7 +137,7 @@ public class FFmpeg {
         heightInt = new Integer(heightString);
     }
 
-    public boolean runBat(String batPath) {
+    public boolean runBat() {
         try {
             Desktop.getDesktop().open(new File(batPath));
         } catch (IOException e) {

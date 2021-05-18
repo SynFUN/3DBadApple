@@ -1,5 +1,3 @@
-import java.io.File;
-
 /**
  * @Time : 2021.5.14 08:54
  * @Author : Synthesis ¶ÅÆ·ºÕ
@@ -7,6 +5,8 @@ import java.io.File;
  * @Software : IntelliJ IDEA
  * https://github.com/SynthesisDu
  */
+
+import java.io.File;
 
 public class Rename {
     private final String originName;

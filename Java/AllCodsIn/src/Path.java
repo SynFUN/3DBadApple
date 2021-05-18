@@ -77,6 +77,15 @@ public class Path {
         return pathMainFile() + "\\Java\\AllCodsIn\\src";
     }
     /**
+     * 此方法会返回项目的bin文件夹的绝对路径
+     * <This method returns the absolute path of the project's bin folder>
+     *
+     * @return 项目的bin文件夹的绝对路径
+     *
+     * @see #pathPythonFile()
+     */
+    public static String pathBinFolder() { return pathPythonFile() + "\\bin"; }
+    /**
      * 此方法可获取用户的桌面的绝对路径
      * <This method gets the absolute path to the user's desktop>
      *
@@ -94,7 +103,6 @@ public class Path {
      * @return 选择的视频文件的路径
      *
      * @see #pathDesktop()
-     * @see Rename#Rename(String)
      */
     public static String pathChooseVideo() {
         // 在创建选择器对象前修改选择器界面风格 否则选择器初始风格太丑
@@ -129,13 +137,22 @@ public class Path {
         File file = jFileChooser.getSelectedFile();
         return file.getAbsolutePath();
     }
-    /**
-     * 此方法会返回项目的bin文件夹的绝对路径
-     * <This method returns the absolute path of the project's bin folder>
-     *
-     * @return 项目的bin文件夹的绝对路径
-     *
-     * @see #pathPythonFile()
-     */
-    public static String pathBinFolder() { return pathPythonFile() + "\\bin"; }
+
+//    public static boolean pathNewFolder() {
+//        File file = new File( pathBinFolder() + );
+//        //如果文件夹不存在则创建
+//        if  (!file.exists() && !file.isDirectory()) {
+//            System.out.println("@ 新建文件夹到" + pathBinFolder() + "以存贮生成的图片");
+//            if (file.mkdir()) {
+//                System.out.println("@ 文件夹创建成功");
+//                return true;
+//            }
+//            else {
+//                System.out.println("# Error : FolderForVideoToImgError");
+//                return false;
+//            }
+//        } else {
+//            Rename rename = new Rename( pathBinFolder() );
+//        }
+//    }
 }

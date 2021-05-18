@@ -13,7 +13,6 @@
  */
 
 import org.python.util.PythonInterpreter;
-import java.io.*;
 
 /**
  * 此类负责运行Python文件
