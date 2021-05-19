@@ -11,15 +11,13 @@ import java.io.File;
 
 public class Rename {
     private final String originName;
-    private final String path;
+    private String path;
     private String nowName;
 
     public Rename(String p) {
-        File file = new File(p);
-        p = file.getAbsolutePath().replaceAll(file.getName(), "");
-        path = p;
-        originName = file.getName();
-        nowName = file.getName();
+        originName = new File(p).getName();
+        nowName = new File(p).getName();
+        path = p.substring(0, p.length() - nowName.length());
     }
 
     public String getOriginName() { return originName; }
@@ -28,24 +26,28 @@ public class Rename {
 
     public String getPath() { return path; }
 
-    public String getNowFilePath() { return path + nowName; }
+    public String getNowFilePath() { return path + "\\" + nowName; }
 
     public void setName() {
-        String newName = nowName;
+        String newName = "";
         System.out.println("@ Check if video name illegal that needs to rename");
         if (nowName.length() > 12 || nowName.contains(" ")) {
-            newName = (nowName.substring(0, 8).replaceAll(" ", "") + ".mp4");
+            newName = (nowName.replaceAll(" ", "").substring(0, 8) + ".mp4");
             System.out.println("@ Rename video file to became legal");
             System.out.println("@ Path : " + path);
             System.out.println("@ From [" + nowName + "] To [" + newName + "]");
-            // 如果新文件名与原来不同就执行
-            if (!newName.equals(nowName)) {
-                File oldFile = new File(path + nowName);
-                File newFile = new File(path + newName);
-                System.out.print("@ Renamed : ");
-                System.out.println(oldFile.renameTo(newFile));
-                nowName = newName;
-            } else System.out.println("# Error : NewNameSameWithOldName");
+            File oldFile = new File(path + nowName);
+            File newFile = new File(path + newName);
+            if (!oldFile.renameTo(newFile)) {
+                newName = "illegal.mp4";
+                oldFile = new File(path + nowName);
+                newFile = new File(path + newName);
+                if (oldFile.renameTo(newFile)) System.out.println("@ Have to rename the video to illegal.mp4");
+                else System.out.println("# Error : OriginFileNameUnacceptableForRename=[Rename.setName()]");
+            } else {
+                System.out.println("@ Renamed for remove illegal chars and retain 8 chars");
+            }
+            nowName = newName;
         }
     }
 
@@ -63,8 +65,8 @@ public class Rename {
                     return;//重命名文件不存在
                 }
                 // 如果没有重名文件就执行
-                if (newFile.exists() || !newFile.renameTo(oldFile)) System.out.println("# Error : NewNameAlreadyBeenUsed");
-            } else System.out.println("# Error : NewNameSameWithOldName");
-        } else System.out.println("# Error : NameHaveNotBeenChanged");
+                if (newFile.exists() || !newFile.renameTo(oldFile)) System.out.println("# Error : NewNameAlreadyBeenUsed=[Rename.restoreName()]=A");
+            } else System.out.println("# Error : NewNameSameWithOldName=[Rename.restoreName()]=B");
+        } else System.out.println("# Error : NameHaveNotBeenChanged=[Rename.restoreName()]=C");
     }
 }

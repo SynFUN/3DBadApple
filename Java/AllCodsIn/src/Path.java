@@ -111,7 +111,7 @@ public class Path {
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
         } catch (IllegalAccessException | UnsupportedLookAndFeelException | ClassNotFoundException | InstantiationException e) {
             // Error：无法改变文件选择器的风格
-            System.out.print("# Error : CannotChangeFileChooserStyle=");
+            System.out.print("# Error : CannotChangeFileChooserStyle=[Path.pathChooseVideo()]");
             e.printStackTrace();
         }
         // 创建文件选择器对象（参数设定选择器初始位置在用户桌面）
@@ -137,22 +137,4 @@ public class Path {
         File file = jFileChooser.getSelectedFile();
         return file.getAbsolutePath();
     }
-
-//    public static boolean pathNewFolder() {
-//        File file = new File( pathBinFolder() + );
-//        //如果文件夹不存在则创建
-//        if  (!file.exists() && !file.isDirectory()) {
-//            System.out.println("@ 新建文件夹到" + pathBinFolder() + "以存贮生成的图片");
-//            if (file.mkdir()) {
-//                System.out.println("@ 文件夹创建成功");
-//                return true;
-//            }
-//            else {
-//                System.out.println("# Error : FolderForVideoToImgError");
-//                return false;
-//            }
-//        } else {
-//            Rename rename = new Rename( pathBinFolder() );
-//        }
-//    }
 }

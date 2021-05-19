@@ -37,10 +37,12 @@ public class FFmpeg {
     private String batPath;
 
     public FFmpeg() {
-        videoFolder = new VideoFolder(Path.pathChooseVideo());
-        videoFolder.setNewFileFolder();
-        video = new Rename(videoFolder.getVideoPath());
+        video = new Rename(Path.pathChooseVideo());
         video.setName();
+        videoFolder = new VideoFolder(video.getNowFilePath());
+        videoFolder.setNewFileFolder();
+        videoFolder.setFileName(video.getNowName());
+//        video.restoreName();
         widthInt = -1;
         heightInt = -1;
         codecName = "";

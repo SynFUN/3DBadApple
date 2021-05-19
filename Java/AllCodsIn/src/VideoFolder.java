@@ -26,8 +26,7 @@ public class VideoFolder {
     public String getVideoPath() { return folderPath + "\\" + originFile.getName(); }
 
     public void setFileName(String fileName) {
-        File in = new File(folderPath + "\\" + fileName);
-        originFile = in;
+        originFile = new File(folderPath + "\\" + fileName);
     }
 
     public void setNewFileFolder() {
@@ -39,7 +38,7 @@ public class VideoFolder {
         if (!newFolder.exists()) {
             // 创建语句 创建失败则抛出异常
             if (newFolder.mkdirs()) System.out.println("@ 成功在bin\\.temp创建视频文件夹");
-            else System.out.println("# Error : 创建视频文件夹出错=[VideoFolder.setNewFileFolder]=A");
+            else System.out.println("# Error : 创建视频文件夹出错=[VideoFolder.setNewFileFolder()]=A");
         // 如果已存在文件则添加(1)序号后缀
         } else {
             path += " (1)";
