@@ -30,13 +30,16 @@ import java.io.*;
 public class FFmpeg {
 
     public final Rename video;
+    public final VideoFolder videoFolder;
     private int widthInt;
     private int heightInt;
     private String codecName;
     private String batPath;
 
     public FFmpeg() {
-        video = new Rename(Path.pathChooseVideo());
+        videoFolder = new VideoFolder(Path.pathChooseVideo());
+        videoFolder.setNewFileFolder();
+        video = new Rename(videoFolder.getVideoPath());
         video.setName();
         widthInt = -1;
         heightInt = -1;
@@ -73,6 +76,7 @@ public class FFmpeg {
 
     public boolean batFFR() {
         batPath = Path.pathBinFolder() + "\\ffr.bat";
+        video.setName();
         // 准备要存入ffr.bat的cmd命令
         String cmd = "ffmpeg -i " + video.getNowFilePath() + " -r 8 " + video.getPath() + "%%05d.png";
         System.out.println(cmd);
