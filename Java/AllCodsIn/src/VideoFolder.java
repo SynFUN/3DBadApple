@@ -1,14 +1,14 @@
-import java.io.*;
-import java.nio.channels.FileChannel;
-
 /**
  * @Time : 2021.5.11 10:41
  * @Author : Synthesis 杜品赫
  * @File : VideoFolder.java
  * @Software : IntelliJ IDEA 2020.3.4
  * @JDK : 1.8.0
- * https://github.com/SynthesisDu/MC_BadAppleDGDH
+ * @link :  https://github.com/SynthesisDu/MC_BadAppleDGDH
  */
+
+import java.io.*;
+import java.nio.channels.FileChannel;
 
 public class VideoFolder {
     private File originFile;
@@ -24,10 +24,6 @@ public class VideoFolder {
     public String getFolderPath() { return folderPath; }
 
     public String getVideoPath() { return folderPath + "\\" + originFile.getName(); }
-
-    public void setFileName(String fileName) {
-        originFile = new File(folderPath + "\\" + fileName);
-    }
 
     public void setNewFileFolder() {
         // 路径为项目Bin文件夹下新建originFile的同名文件夹

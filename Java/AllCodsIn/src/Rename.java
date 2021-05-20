@@ -4,7 +4,7 @@
  * @File : Rename.java
  * @Software : IntelliJ IDEA 2020.3.4
  * @JDK : 1.8.0
- * https://github.com/SynthesisDu/MC_BadAppleDGDH
+ * @link :  https://github.com/SynthesisDu/MC_BadAppleDGDH
  */
 
 import java.io.File;
@@ -46,27 +46,13 @@ public class Rename {
                 else System.out.println("# Error : OriginFileNameUnacceptableForRename=[Rename.setName()]");
             } else {
                 System.out.println("@ Renamed for remove illegal chars and retain 8 chars");
-            }
-            nowName = newName;
-        }
-    }
+            } nowName = newName;
+    }   }
 
     public void restoreName() {
         if (!nowName.equals(originName)) {
-            File file = new File(path);
-            String oldName = nowName;
-            String newName = originName;
-            nowName = originName;
-            // 如果新文件名与原来不同就执行
-            if (!oldName.equals(newName)) {
-                File oldFile = new File(path + oldName);
-                File newFile = new File(path + newName);
-                if (!oldFile.exists()) {
-                    return;//重命名文件不存在
-                }
-                // 如果没有重名文件就执行
-                if (newFile.exists() || !newFile.renameTo(oldFile)) System.out.println("# Error : NewNameAlreadyBeenUsed=[Rename.restoreName()]=A");
-            } else System.out.println("# Error : NewNameSameWithOldName=[Rename.restoreName()]=B");
-        } else System.out.println("# Error : NameHaveNotBeenChanged=[Rename.restoreName()]=C");
-    }
-}
+            File oldFile = new File(path + nowName);
+            File newFile = new File(path + originName);
+            // 如果没有重名文件就执行
+            if (!oldFile.renameTo(newFile)) System.out.println("# Error : NewNameAlreadyBeenUsed=[Rename.restoreName()]=A");
+}   }   }

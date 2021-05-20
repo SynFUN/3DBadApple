@@ -1,1 +1,1 @@
-ffmpeg -i C:\Users\Admin\Desktop\BadApple\BadApple.mp4 -r 8 C:\Users\Admin\Desktop\BadApple\%%05d.png
+ffmpeg -i C:\Users\Admin\Documents\GitHub\MC_BadAppleDGDH\Python\bin\.temp\B-[-a;A]\B-[-a;A].mp4 -r 8 C:\Users\Admin\Documents\GitHub\MC_BadAppleDGDH\Python\bin\.temp\B-[-a;A]\%%05d.png

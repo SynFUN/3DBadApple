@@ -4,7 +4,8 @@
  * @File : FFmpeg.java
  * @Software : IntelliJ IDEA 2020.3.4
  * @JDK : 1.8.0
- * https://github.com/SynthesisDu/MC_BadAppleDGDH
+ * @link :  https://github.com/SynthesisDu/MC_BadAppleDGDH
+ * <
  * -----------------------------------------------
  * windows only
  * One extra environmental require : ffmpeg/bin
@@ -14,6 +15,7 @@
  * https://blog.csdn.net/Chanssl/article/details/83050959
  * -----------------------------------------------
  * 如果中文产生乱码，编译器相关编码设置调整为GBK即可
+ * >
  */
 
 import java.awt.*;
@@ -28,38 +30,71 @@ import java.io.*;
  * @apiNote add FFmpeg to path environment variable
  */
 public class FFmpeg {
-
+    // 此对象作用于构造器 会将文件名合法化 并恢复原文件名
     public final Rename video;
+    // 此对象作用于构造器和方法 用于移动合法化名称后的文件到Bin 并在Bin下创建同名字文件夹
     public final VideoFolder videoFolder;
+    // 作用于readLog() 用于捕捉ffs.bat生成的log中的视频的长宽高以及编码
     private int widthInt;
     private int heightInt;
     private String codecName;
+    // 作用于batFFS()batFFR()和runBat()之间 会存储刚编辑过的bat文件的路径 并使runBat()运行刚编辑过的bat
     private String batPath;
 
+    /**
+     * 创建此对象后将引出路径选择器 对所选视频文件进行名称检查和转移
+     */
     public FFmpeg() {
+        // 初始化Rename对象
         video = new Rename(Path.pathChooseVideo());
+        // 原视频文件名称合法化
         video.setName();
+        // 初始化VideoFolder对象
         videoFolder = new VideoFolder(video.getNowFilePath());
+        // 生成同名文件夹到Bin 复制合法化名称的视频到生成的文件夹
         videoFolder.setNewFileFolder();
-        videoFolder.setFileName(video.getNowName());
-//        video.restoreName();
+        // 还原原位的原文件的名称
+        video.restoreName();
+        // 初始化其他变量
         widthInt = -1;
         heightInt = -1;
         codecName = "";
         batPath = "";
     }
-
+    /**
+     * Getter
+     *
+     * @return 对象对应的视频的宽度
+     *
+     * @see #readLog()
+     */
     public int getWidthInt() { return widthInt; }
-
+    /**
+     * Getter
+     *
+     * @return 对象对应的视频的高度
+     *
+     * @see #readLog()
+     */
     public int getHeightInt() { return heightInt; }
-
+    /**
+     * Getter
+     *
+     * @return 对象对应的视频的编码格式
+     *
+     * @see #readLog()
+     */
     public String getCodecName() { return codecName; }
 
+    /**
+     * 此方法将对象对应的视频的ffmpeg代码写入ffs.bat文件 代码功能为生成log文件保存对象文件的相关信息
+     *
+     * @return 仅当出现异常时返回false
+     */
     public boolean batFFS() {
         batPath = Path.pathBinFolder() + "\\ffs.bat";
-        video.setName();
         // 准备要存入ffs.bat的cmd命令
-        String cmd = "ffprobe -select_streams v -show_entries format=size -show_streams -v quiet -of csv=\"p=0\" -of json -i " + video.getNowFilePath() + " > " + Path.pathBinFolder() + "\\v.log";
+        String cmd = "ffprobe -select_streams v -show_entries format=size -show_streams -v quiet -of csv=\"p=0\" -of json -i " + videoFolder.getVideoPath() + " > " + Path.pathBinFolder() + "\\v.log";
         // 存入命令道ffs.bat
         try {
             File bat = new File(Path.pathBinFolder() + "\\ffs.bat");
@@ -78,10 +113,8 @@ public class FFmpeg {
 
     public boolean batFFR() {
         batPath = Path.pathBinFolder() + "\\ffr.bat";
-        video.setName();
         // 准备要存入ffr.bat的cmd命令
-        String cmd = "ffmpeg -i " + video.getNowFilePath() + " -r 8 " + video.getPath() + "%%05d.png";
-        System.out.println(cmd);
+        String cmd = "ffmpeg -i " + videoFolder.getVideoPath() + " -r 8 " + videoFolder.getFolderPath() + "\\%%05d.png";
         // 存入命令道ffr.bat
         try {
             File bat = new File(Path.pathBinFolder() + "\\ffr.bat");

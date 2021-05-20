@@ -4,7 +4,7 @@
  * @File : Path.java
  * @Software : IntelliJ IDEA
  * @JDK : 1.8.0
- * https://github.com/SynthesisDu/MC_BadAppleDGDH
+ * @link :  https://github.com/SynthesisDu/MC_BadAppleDGDH
  */
 
 import javax.swing.*;
@@ -15,19 +15,12 @@ import java.io.IOException;
 /**
  * 此类专门提供本项目所需的生成相关路径的方法
  *
- * @author Synthesis 杜品赫
- * <https://github.com/SynthesisDu>
+ * @author Synthesis 杜品赫 <https://github.com/SynthesisDu>
  *
- * @see #pathMainFile()
- * @see #pathPythonFile()
- * @see #pathDesktop()
- * @see #pathChooseVideo()
- * @see #pathBinFolder()
  */
 public class Path {
     /**
      * 此方法会返回项目的一级文件夹的绝对路径
-     * <This method returns the absolute path to the main folder of this repository from the relative path relationship>
      *
      * @return 项目的一级文件夹的绝对路径
      *
@@ -56,7 +49,6 @@ public class Path {
     }
     /**
      * 此方法将返回项目的Python文件夹的绝对路径
-     * <This method returns the absolute path to the Python folder>
      *
      * @return 项目的Python文件夹的绝对路径
      *
@@ -67,7 +59,6 @@ public class Path {
     }
     /**
      * 此方法将返回项目的Java的src文件夹的绝对路径
-     * <This method returns the absolute path to the src folder of Java>
      *
      * @return 项目的Java的src文件夹的绝对路径
      *
@@ -78,7 +69,6 @@ public class Path {
     }
     /**
      * 此方法会返回项目的bin文件夹的绝对路径
-     * <This method returns the absolute path of the project's bin folder>
      *
      * @return 项目的bin文件夹的绝对路径
      *
@@ -87,7 +77,6 @@ public class Path {
     public static String pathBinFolder() { return pathPythonFile() + "\\bin"; }
     /**
      * 此方法可获取用户的桌面的绝对路径
-     * <This method gets the absolute path to the user's desktop>
      *
      * @return 用户的桌面的绝对路径
      */
@@ -98,7 +87,6 @@ public class Path {
     }
     /**
      * 此方法会弹出一个专门选择.mp4文件的选择框并返回所选文件的绝对路径
-     * <This method brings up a select box specifically for selecting .mp4 files and returns the absolute path of the selected file>
      *
      * @return 选择的视频文件的路径
      *
@@ -136,5 +124,4 @@ public class Path {
         // 获取文件选择器选定的文件路径
         File file = jFileChooser.getSelectedFile();
         return file.getAbsolutePath();
-    }
-}
+}   }
