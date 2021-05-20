@@ -28,21 +28,78 @@ import java.io.*;
  * @author Synthesis 杜品赫 <https://github.com/SynthesisDu>
  *
  * @apiNote add FFmpeg to path environment variable
+ *
+ * @see Path#pathBinFolder()
+ * @see Path#pathChooseVideo()
+ * @see Rename#Rename(String)
+ * @see Rename#setName()
+ * @see Rename#getNowFilePath()
+ * @see Rename#restoreName()
+ * @see VideoFolder#VideoFolder(String)
+ * @see VideoFolder#setNewFileFolder()
+ * @see VideoFolder#getVideoPath()
+ * @see VideoFolder#getFolderPath()
  */
 public class FFmpeg {
-    // 此对象作用于构造器 会将文件名合法化 并恢复原文件名
+
+    /**
+     * 作用于构造器 会将文件名合法化 并恢复原文件名
+     *
+     * @see #FFmpeg()
+     */
     public final Rename video;
-    // 此对象作用于构造器和方法 用于移动合法化名称后的文件到Bin 并在Bin下创建同名字文件夹
+
+    /**
+     * 作用于构造器和方法 用于移动合法化名称后的文件到Bin 并在Bin下创建同名字文件夹
+     *
+     * @see #FFmpeg()
+     */
     public final VideoFolder videoFolder;
-    // 作用于readLog() 用于捕捉ffs.bat生成的log中的视频的长宽高以及编码
+
+    /**
+     * 用于捕捉ffs.bat生成的log中的视频的宽度
+     *
+     * @see #FFmpeg()
+     * @see #readLog()
+     */
     private int widthInt;
+
+    /**
+     * 用于捕捉ffs.bat生成的log中的视频的高度
+     *
+     * @see #FFmpeg()
+     * @see #readLog()
+     */
     private int heightInt;
+
+    /**
+     * 用于捕捉ffs.bat生成的log中的视频的编码格式
+     *
+     * @see #FFmpeg()
+     * @see #readLog()
+     */
     private String codecName;
-    // 作用于batFFS()batFFR()和runBat()之间 会存储刚编辑过的bat文件的路径 并使runBat()运行刚编辑过的bat
+
+    /**
+     * 作用于batFFS()batFFR()和runBat()之间 会存储刚编辑过的bat文件的路径 并使runBat()运行刚编辑过的bat
+     *
+     * @see #FFmpeg()
+     * @see #batFFS()
+     * @see #batFFR()
+     * @see #readLog()
+     */
     private String batPath;
 
     /**
      * 创建此对象后将引出路径选择器 对所选视频文件进行名称检查和转移
+     *
+     * @see Path#pathChooseVideo()
+     * @see Rename#Rename(String)
+     * @see Rename#setName()
+     * @see Rename#getNowFilePath()
+     * @see Rename#restoreName()
+     * @see VideoFolder#VideoFolder(String)
+     * @see VideoFolder#setNewFileFolder()
      */
     public FFmpeg() {
         // 初始化Rename对象
@@ -61,41 +118,51 @@ public class FFmpeg {
         codecName = "";
         batPath = "";
     }
+
     /**
      * Getter
      *
      * @return 对象对应的视频的宽度
      *
      * @see #readLog()
+     * @see #widthInt
      */
     public int getWidthInt() { return widthInt; }
+
     /**
      * Getter
      *
      * @return 对象对应的视频的高度
      *
      * @see #readLog()
+     * @see #heightInt
      */
     public int getHeightInt() { return heightInt; }
+
     /**
      * Getter
      *
      * @return 对象对应的视频的编码格式
      *
      * @see #readLog()
+     * @see #codecName
      */
     public String getCodecName() { return codecName; }
 
     /**
-     * 此方法将对象对应的视频的ffmpeg代码写入ffs.bat文件 代码功能为生成log文件保存对象文件的相关信息
+     * 此方法将对象对应的视频的ffmpeg代码写入ffs.bat文件 ffmpeg代码功能为生成log文件保存对象文件的信息
      *
      * @return 仅当出现异常时返回false
+     *
+     * @see Path#pathBinFolder()
+     * @see VideoFolder#getVideoPath()
      */
     public boolean batFFS() {
+        // 此方法将编辑的bat文件的路径
         batPath = Path.pathBinFolder() + "\\ffs.bat";
         // 准备要存入ffs.bat的cmd命令
         String cmd = "ffprobe -select_streams v -show_entries format=size -show_streams -v quiet -of csv=\"p=0\" -of json -i " + videoFolder.getVideoPath() + " > " + Path.pathBinFolder() + "\\v.log";
-        // 存入命令道ffs.bat
+        // 存入命令到ffs.bat
         try {
             File bat = new File(Path.pathBinFolder() + "\\ffs.bat");
             BufferedWriter out = new BufferedWriter(new FileWriter(bat));
@@ -111,11 +178,21 @@ public class FFmpeg {
         return true;
     }
 
+    /**
+     * 此方法将对象对应的视频的ffmpeg代码写入ffr.bat文件 ffmpeg代码功能为将对象视频切片成图片
+     *
+     * @return 仅当出现异常时返回false
+     *
+     * @see Path#pathBinFolder()
+     * @see VideoFolder#getVideoPath()
+     * @see VideoFolder#getFolderPath()
+     */
     public boolean batFFR() {
+        // 此方法将编辑的bat文件的路径
         batPath = Path.pathBinFolder() + "\\ffr.bat";
-        // 准备要存入ffr.bat的cmd命令
+        // 准备要存入ffr.bat的cmd命令 “-r 8"意为每秒生成8帧图片
         String cmd = "ffmpeg -i " + videoFolder.getVideoPath() + " -r 8 " + videoFolder.getFolderPath() + "\\%%05d.png";
-        // 存入命令道ffr.bat
+        // 存入命令到ffr.bat
         try {
             File bat = new File(Path.pathBinFolder() + "\\ffr.bat");
             BufferedWriter out = new BufferedWriter(new FileWriter(bat));
@@ -131,6 +208,12 @@ public class FFmpeg {
         return true;
     }
 
+    /**
+     * 此方法将读取ffs.bat运行后存储在v.log的数据
+     *
+     * @see Path#pathBinFolder()
+     * @see #batFFS()
+     */
     public void readLog() {
         // 用来存储遍历的所有文件内的内容
         ArrayList<String> allInLog = new ArrayList<>();
@@ -176,6 +259,15 @@ public class FFmpeg {
         heightInt = new Integer(heightString);
     }
 
+    /**
+     * 运行上一个被编辑过的bat文件 需先运行batFFS()或batFFR()
+     *
+     * @return 仅当出现异常时返回false
+     *
+     * @see #batFFS()
+     * @see #batFFR()
+     * @see #batPath
+     */
     public boolean runBat() {
         try {
             Desktop.getDesktop().open(new File(batPath));

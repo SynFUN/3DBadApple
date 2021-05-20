@@ -11,7 +11,7 @@ import java.io.*;
 import java.nio.channels.FileChannel;
 
 public class VideoFolder {
-    private File originFile;
+    private final File originFile;
     private String folderPath;
 
     public VideoFolder(String videoPath) {

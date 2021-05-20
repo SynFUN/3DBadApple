@@ -9,6 +9,9 @@
 
 import java.io.File;
 
+/**
+ *
+ */
 public class Rename {
     private final String originName;
     private String path;

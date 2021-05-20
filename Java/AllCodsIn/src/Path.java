@@ -19,6 +19,7 @@ import java.io.IOException;
  *
  */
 public class Path {
+
     /**
      * 此方法会返回项目的一级文件夹的绝对路径
      *
@@ -47,6 +48,7 @@ public class Path {
         }
         return path;
     }
+
     /**
      * 此方法将返回项目的Python文件夹的绝对路径
      *
@@ -57,6 +59,7 @@ public class Path {
     public static String pathPythonFile() {
         return pathMainFile() + "\\Python";
     }
+
     /**
      * 此方法将返回项目的Java的src文件夹的绝对路径
      *
@@ -67,6 +70,7 @@ public class Path {
     public static String pathJavaSrcFile() {
         return pathMainFile() + "\\Java\\AllCodsIn\\src";
     }
+
     /**
      * 此方法会返回项目的bin文件夹的绝对路径
      *
@@ -75,6 +79,7 @@ public class Path {
      * @see #pathPythonFile()
      */
     public static String pathBinFolder() { return pathPythonFile() + "\\bin"; }
+
     /**
      * 此方法可获取用户的桌面的绝对路径
      *
@@ -85,6 +90,7 @@ public class Path {
         File file = FileSystemView.getFileSystemView().getHomeDirectory();
         return file.getAbsolutePath();
     }
+
     /**
      * 此方法会弹出一个专门选择.mp4文件的选择框并返回所选文件的绝对路径
      *
@@ -110,14 +116,10 @@ public class Path {
         jFileChooser.setMultiSelectionEnabled(false);
         // 设定选择器选择的文件类型（FileFilter是抽象类因此需要继承覆写）
         jFileChooser.setFileFilter(new javax.swing.filechooser.FileFilter() {
-            public boolean accept(File f) {
-                // 限定文件后缀
-                return f.getName().endsWith(".mp4") || f.isDirectory();
-            }
-            public String getDescription() {
-                // 对文件类型的文字描述
-                return "MP4(*.mp4)";
-            }
+            // 限定文件后缀
+            public boolean accept(File f) { return f.getName().endsWith(".mp4") || f.isDirectory(); }
+            // 对文件类型的文字描述
+            public String getDescription() { return "MP4(*.mp4)"; }
         });
         // 弹出文件选择器窗口
         jFileChooser.showOpenDialog(null);

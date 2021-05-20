@@ -26,6 +26,7 @@ import org.python.util.PythonInterpreter;
  * @see Path#pathPythonFile()
  */
 public class Jython {
+
     /**
      * 此方法将运行项目的另一路径中的Python文件：Python\Mcpi.py
      * <This method will run the Python file in another path: Python\McPi.py>
@@ -37,6 +38,7 @@ public class Jython {
         PythonInterpreter pyFile = new PythonInterpreter();
         pyFile.execfile(fileName);
     }
+
     /**
      * 此方法将运行项目的另一路径中的Python文件：Python\ImgToArray.py
      *
