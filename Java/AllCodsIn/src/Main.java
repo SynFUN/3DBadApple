@@ -10,14 +10,13 @@
 public class Main {
     public static void main(String[] args) {
         FFmpeg ffs = new FFmpeg();
-        if (ffs.batFFS() && ffs.runBat()) {
+        if (ffs.batFFS()) {
             System.out.println("@ [v.log] formed succeed");
+            System.out.println("@ width : " + ffs.getWidthInt());
+            System.out.println("@ height : " + ffs.getHeightInt());
         } else { System.out.println("# Error : [v.log]FormedError"); }
-        ffs.readLog();
-        System.out.println("@ width : " + ffs.getWidthInt());
-        System.out.println("@ height : " + ffs.getHeightInt());
-        if (ffs.batFFR() && ffs.runBat()) {
+        if (ffs.batFFR()) {
             System.out.println("@ MP4 to PNG formed succeed");
-        } else { System.out.println("# Error : MP4ToPNGFormedError"); }
+        } else { System.out.println("# Error : FFmpeg.batFFR()"); }
     }
 }

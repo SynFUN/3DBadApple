@@ -16,7 +16,6 @@ import java.io.IOException;
  * 此类专门提供本项目所需的生成相关路径的方法
  *
  * @author Synthesis 杜品赫 <https://github.com/SynthesisDu>
- *
  */
 public class Path {
 
@@ -24,7 +23,6 @@ public class Path {
      * 此方法会返回项目的一级文件夹的绝对路径
      *
      * @return 项目的一级文件夹的绝对路径
-     *
      */
     public static String pathMainFile() {
         // 创建指向此项目的Java文件夹的File对象

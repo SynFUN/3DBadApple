@@ -29,6 +29,7 @@ import java.io.*;
  *
  * @apiNote add FFmpeg to path environment variable
  *
+ * @see "调用的参数和方法"
  * @see Path#pathBinFolder()
  * @see Path#pathChooseVideo()
  * @see Rename#Rename(String)
@@ -45,6 +46,7 @@ public class FFmpeg {
     /**
      * 作用于构造器 会将文件名合法化 并恢复原文件名
      *
+     * @see "被修改"
      * @see #FFmpeg()
      */
     public final Rename video;
@@ -52,6 +54,7 @@ public class FFmpeg {
     /**
      * 作用于构造器和方法 用于移动合法化名称后的文件到Bin 并在Bin下创建同名字文件夹
      *
+     * @see "被修改"
      * @see #FFmpeg()
      */
     public final VideoFolder videoFolder;
@@ -59,40 +62,31 @@ public class FFmpeg {
     /**
      * 用于捕捉ffs.bat生成的log中的视频的宽度
      *
+     * @see "被修改"
      * @see #FFmpeg()
-     * @see #readLog()
      */
     private int widthInt;
 
     /**
      * 用于捕捉ffs.bat生成的log中的视频的高度
      *
+     * @see "被修改"
      * @see #FFmpeg()
-     * @see #readLog()
      */
     private int heightInt;
 
     /**
      * 用于捕捉ffs.bat生成的log中的视频的编码格式
      *
+     * @see "被修改"
      * @see #FFmpeg()
-     * @see #readLog()
      */
     private String codecName;
 
     /**
-     * 作用于batFFS()batFFR()和runBat()之间 会存储刚编辑过的bat文件的路径 并使runBat()运行刚编辑过的bat
-     *
-     * @see #FFmpeg()
-     * @see #batFFS()
-     * @see #batFFR()
-     * @see #readLog()
-     */
-    private String batPath;
-
-    /**
      * 创建此对象后将引出路径选择器 对所选视频文件进行名称检查和转移
      *
+     * @see "调用的参数和方法"
      * @see Path#pathChooseVideo()
      * @see Rename#Rename(String)
      * @see Rename#setName()
@@ -116,7 +110,6 @@ public class FFmpeg {
         widthInt = -1;
         heightInt = -1;
         codecName = "";
-        batPath = "";
     }
 
     /**
@@ -124,7 +117,9 @@ public class FFmpeg {
      *
      * @return 对象对应的视频的宽度
      *
-     * @see #readLog()
+     * @see "需先被运行"
+     * @see #batFFS()
+     * @see "调用的参数"
      * @see #widthInt
      */
     public int getWidthInt() { return widthInt; }
@@ -134,7 +129,9 @@ public class FFmpeg {
      *
      * @return 对象对应的视频的高度
      *
-     * @see #readLog()
+     * @see "需先被运行"
+     * @see #batFFS()
+     * @see "调用的参数"
      * @see #heightInt
      */
     public int getHeightInt() { return heightInt; }
@@ -144,7 +141,9 @@ public class FFmpeg {
      *
      * @return 对象对应的视频的编码格式
      *
-     * @see #readLog()
+     * @see "需先被运行"
+     * @see #batFFS()
+     * @see "调用的参数"
      * @see #codecName
      */
     public String getCodecName() { return codecName; }
@@ -154,12 +153,13 @@ public class FFmpeg {
      *
      * @return 仅当出现异常时返回false
      *
+     * @see "调用的参数和方法"
      * @see Path#pathBinFolder()
      * @see VideoFolder#getVideoPath()
      */
     public boolean batFFS() {
         // 此方法将编辑的bat文件的路径
-        batPath = Path.pathBinFolder() + "\\ffs.bat";
+        String batPath = Path.pathBinFolder() + "\\ffs.bat";
         // 准备要存入ffs.bat的cmd命令
         String cmd = "ffprobe -select_streams v -show_entries format=size -show_streams -v quiet -of csv=\"p=0\" -of json -i " + videoFolder.getVideoPath() + " > " + Path.pathBinFolder() + "\\v.log";
         // 存入命令到ffs.bat
@@ -175,6 +175,61 @@ public class FFmpeg {
             e.printStackTrace();
             return false;
         }
+        // 运行ffs.bat
+        try {
+            Desktop.getDesktop().open(new File(batPath));
+        } catch (IOException e) {
+            e.printStackTrace();
+            return false;
+        }
+        // 读取ffs.bat生成的v.log
+        try {
+            // 用来存储遍历的所有文件内的内容
+            ArrayList<String> allInLog = new ArrayList<>();
+            try {
+                // 打开[v.log]到一个File对象
+                File log = new File(Path.pathBinFolder() + "\\v.log");
+                // 建立一个read buffer对象（建立一个输入流对象（建立File输入流对象（File对象）））
+                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(new FileInputStream(log)));
+                // 建立一个字符串用来遍历文件的每一行 (D)-C
+                String line = bufferedReader.readLine();
+                // 遍历文件
+                while (line != null) {
+                    // 读入一行数据
+                    line = bufferedReader.readLine();
+                    allInLog.add(line);
+                }
+            } catch (Exception e) {
+                // Error：无法正常的读取v.log
+                System.out.print("# Error : CannotReadFile[v.log]=");
+                e.printStackTrace();
+            }
+            // 从遍历的所有内容中获取codecName
+            int codecNameIndex = allInLog.toString().indexOf("\"codec_name\": ");
+            String codecNameString = allInLog.toString().substring(codecNameIndex, codecNameIndex + 20);
+            codecNameString = codecNameString.replaceAll("\"codec_name\": ", "");
+            codecNameString = codecNameString.replaceAll(",", "");
+            codecNameString = codecNameString.replaceAll(" ", "");
+            codecNameString = codecNameString.replaceAll("\"", "");
+            codecName = codecNameString;
+            // 从遍历的所有内容中获取width
+            int widthIndex = allInLog.toString().indexOf("\"width\": ");
+            String widthString = allInLog.toString().substring(widthIndex, widthIndex + 20);
+            widthString = widthString.replaceAll("\"width\": ", "");
+            widthString = widthString.replaceAll(",", "");
+            widthString = widthString.replaceAll(" ", "");
+            widthInt = new Integer(widthString);
+            // 从遍历的所有内容中获取height
+            int heightIndex = allInLog.toString().indexOf("\"height\": ");
+            String heightString = allInLog.toString().substring(heightIndex, heightIndex + 20);
+            heightString = heightString.replace("\"height\": ", "");
+            heightString = heightString.replaceAll(",", "");
+            heightString = heightString.replaceAll(" ", "");
+            heightInt = new Integer(heightString);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
         return true;
     }
 
@@ -183,15 +238,16 @@ public class FFmpeg {
      *
      * @return 仅当出现异常时返回false
      *
+     * @see "调用的参数和方法"
      * @see Path#pathBinFolder()
      * @see VideoFolder#getVideoPath()
      * @see VideoFolder#getFolderPath()
      */
     public boolean batFFR() {
         // 此方法将编辑的bat文件的路径
-        batPath = Path.pathBinFolder() + "\\ffr.bat";
+        String batPath = Path.pathBinFolder() + "\\ffr.bat";
         // 准备要存入ffr.bat的cmd命令 “-r 8"意为每秒生成8帧图片
-        String cmd = "ffmpeg -i " + videoFolder.getVideoPath() + " -r 8 " + videoFolder.getFolderPath() + "\\%%05d.png";
+        String cmd = "ffmpeg -i " + videoFolder.getVideoPath() + " -r 8 " + videoFolder.getFolderPath() + "\\%%05d.png\nexplorer.exe " + videoFolder.getFolderPath();
         // 存入命令到ffr.bat
         try {
             File bat = new File(Path.pathBinFolder() + "\\ffr.bat");
@@ -205,70 +261,7 @@ public class FFmpeg {
             e.printStackTrace();
             return false;
         }
-        return true;
-    }
-
-    /**
-     * 此方法将读取ffs.bat运行后存储在v.log的数据
-     *
-     * @see Path#pathBinFolder()
-     * @see #batFFS()
-     */
-    public void readLog() {
-        // 用来存储遍历的所有文件内的内容
-        ArrayList<String> allInLog = new ArrayList<>();
-        try {
-            // 打开[v.log]到一个File对象
-            File log = new File(Path.pathBinFolder() + "\\v.log");
-            // 建立一个read buffer对象（建立一个输入流对象（建立File输入流对象（File对象）））
-            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(new FileInputStream(log)));
-            // 建立一个字符串用来遍历文件的每一行 (D)-C
-            String line = bufferedReader.readLine();
-            // 遍历文件
-            while (line != null) {
-                // 读入一行数据
-                line = bufferedReader.readLine();
-                allInLog.add(line);
-            }
-        } catch (Exception e) {
-            // Error：无法正常的读取v.log
-            System.out.print("# Error : CannotReadFile[v.log]=");
-            e.printStackTrace();
-        }
-        // 从遍历的所有内容中获取codecName
-        int codecNameIndex = allInLog.toString().indexOf("\"codec_name\": ");
-        String codecNameString = allInLog.toString().substring(codecNameIndex, codecNameIndex + 20);
-        codecNameString = codecNameString.replaceAll("\"codec_name\": ", "");
-        codecNameString = codecNameString.replaceAll(",", "");
-        codecNameString = codecNameString.replaceAll(" ", "");
-        codecNameString = codecNameString.replaceAll("\"", "");
-        codecName = codecNameString;
-        // 从遍历的所有内容中获取width
-        int widthIndex = allInLog.toString().indexOf("\"width\": ");
-        String widthString = allInLog.toString().substring(widthIndex, widthIndex + 20);
-        widthString = widthString.replaceAll("\"width\": ", "");
-        widthString = widthString.replaceAll(",", "");
-        widthString = widthString.replaceAll(" ", "");
-        widthInt = new Integer(widthString);
-        // 从遍历的所有内容中获取height
-        int heightIndex = allInLog.toString().indexOf("\"height\": ");
-        String heightString = allInLog.toString().substring(heightIndex, heightIndex + 20);
-        heightString = heightString.replace("\"height\": ", "");
-        heightString = heightString.replaceAll(",", "");
-        heightString = heightString.replaceAll(" ", "");
-        heightInt = new Integer(heightString);
-    }
-
-    /**
-     * 运行上一个被编辑过的bat文件 需先运行batFFS()或batFFR()
-     *
-     * @return 仅当出现异常时返回false
-     *
-     * @see #batFFS()
-     * @see #batFFR()
-     * @see #batPath
-     */
-    public boolean runBat() {
+        // 运行ffr.bat
         try {
             Desktop.getDesktop().open(new File(batPath));
         } catch (IOException e) {
