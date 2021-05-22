@@ -34,13 +34,13 @@ public class Path {
             path = fileFolder.getCanonicalPath();
         } catch (IOException e) {
             // Error：File类的getCanonicalPath()运行异常
-            System.out.print("# Error:File.getCanonicalPath()Error=");
+            System.out.print("# Error [Path.pathMainFile()]=A=");
             e.printStackTrace();
         }
         // 检查以上是否已经正确运行 path是否被赋值
         if (path == null) {
             // Error：无法获取到正确的路径
-            path = "# Error:CannotGetRightPath(Jython.getPathOfPythonFile())";
+            path = "# Error NoPath=[Path.pathMainFile()]=B";
         } else {
             path = path.substring(0,path.length()-5);
         }
@@ -96,32 +96,74 @@ public class Path {
      *
      * @see #pathDesktop()
      */
-    public static String pathChooseVideo() {
+    public static String pathChooseMP4() {
         // 在创建选择器对象前修改选择器界面风格 否则选择器初始风格太丑
         try {
             // 此句在编译器会抛出异常
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
         } catch (IllegalAccessException | UnsupportedLookAndFeelException | ClassNotFoundException | InstantiationException e) {
             // Error：无法改变文件选择器的风格
-            System.out.print("# Error : CannotChangeFileChooserStyle=[Path.pathChooseVideo()]");
+            System.out.print("# Error CannotChangeFileChooserStyle=[Path.pathChooseVideo()]=A=");
             e.printStackTrace();
         }
-        // 创建文件选择器对象（参数设定选择器初始位置在用户桌面）
-        JFileChooser jFileChooser = new JFileChooser(pathDesktop());
-        // 选择器仅用于选择文件 而不是文件夹
-        jFileChooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
-        // 选择器仅能选择一个文件 而不能多选
-        jFileChooser.setMultiSelectionEnabled(false);
-        // 设定选择器选择的文件类型（FileFilter是抽象类因此需要继承覆写）
-        jFileChooser.setFileFilter(new javax.swing.filechooser.FileFilter() {
-            // 限定文件后缀
-            public boolean accept(File f) { return f.getName().endsWith(".mp4") || f.isDirectory(); }
-            // 对文件类型的文字描述
-            public String getDescription() { return "MP4(*.mp4)"; }
-        });
-        // 弹出文件选择器窗口
-        jFileChooser.showOpenDialog(null);
-        // 获取文件选择器选定的文件路径
-        File file = jFileChooser.getSelectedFile();
-        return file.getAbsolutePath();
-}   }
+        try {
+            // 创建文件选择器对象（参数设定选择器初始位置在用户桌面）
+            JFileChooser jFileChooser = new JFileChooser(pathDesktop());
+            // 选择器仅用于选择文件 而不是文件夹
+            jFileChooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
+            // 选择器仅能选择一个文件 而不能多选
+            jFileChooser.setMultiSelectionEnabled(false);
+            // 设定选择器选择的文件类型（FileFilter是抽象类因此需要继承覆写）
+            jFileChooser.setFileFilter(new javax.swing.filechooser.FileFilter() {
+                // 限定文件后缀
+                public boolean accept(File f) { return f.getName().endsWith(".mp4") || f.isDirectory(); }
+                // 对文件类型的文字描述
+                public String getDescription() { return "MP4(*.mp4)"; }
+            });
+            // 弹出文件选择器窗口
+            jFileChooser.showOpenDialog(null);
+            // 获取文件选择器选定的文件路径
+            File file = jFileChooser.getSelectedFile();
+            return file.getAbsolutePath();
+        } catch (Exception e) { return "# Error CannotChangeFileChooserStyle=[Path.pathChooseVideo()]=B"; }
+    }
+
+    /**
+     * 此方法会弹出一个专门选择.png文件的选择框并返回所选文件的绝对路径
+     *
+     * @return 选择的图片文件的路径
+     *
+     * @see #pathDesktop()
+     */
+    public static String pathChoosePNG() {
+        // 在创建选择器对象前修改选择器界面风格 否则选择器初始风格太丑
+        try {
+            // 此句在编译器会抛出异常
+            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+        } catch (IllegalAccessException | UnsupportedLookAndFeelException | ClassNotFoundException | InstantiationException e) {
+            // Error：无法改变文件选择器的风格
+            System.out.print("# Error CannotChangeFileChooserStyle=[Path.pathChooseVideo()]=A=");
+            e.printStackTrace();
+        }
+        try {
+            // 创建文件选择器对象（参数设定选择器初始位置在用户桌面）
+            JFileChooser jFileChooser = new JFileChooser(pathDesktop());
+            // 选择器仅用于选择文件 而不是文件夹
+            jFileChooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
+            // 选择器仅能选择一个文件 而不能多选
+            jFileChooser.setMultiSelectionEnabled(false);
+            // 设定选择器选择的文件类型（FileFilter是抽象类因此需要继承覆写）
+            jFileChooser.setFileFilter(new javax.swing.filechooser.FileFilter() {
+                // 限定文件后缀
+                public boolean accept(File f) { return f.getName().endsWith(".png") || f.isDirectory(); }
+                // 对文件类型的文字描述
+                public String getDescription() { return "PNG(*.png)"; }
+            });
+            // 弹出文件选择器窗口
+            jFileChooser.showOpenDialog(null);
+            // 获取文件选择器选定的文件路径
+            File file = jFileChooser.getSelectedFile();
+            return file.getAbsolutePath();
+        } catch (Exception e) { return "# Error CannotChangeFileChooserStyle=[Path.pathChooseVideo()]=B"; }
+    }
+}

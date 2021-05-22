@@ -1,1 +1,1 @@
-ffprobe -select_streams v -show_entries format=size -show_streams -v quiet -of csv="p=0" -of json -i C:\Users\Admin\Documents\GitHub\MC_BadAppleDGDH\Python\bin\.temp\BadApple\BadApple.mp4 > C:\Users\Admin\Documents\GitHub\MC_BadAppleDGDH\Python\bin\v.log
+ffprobe -select_streams v -show_entries format=size -show_streams -v quiet -of csv="p=0" -of json -i C:\Users\Admin\Documents\GitHub\MC_BadAppleDGDH\Python\bin\.temp\B_-_[__-\B_-_[__-.mp4 > C:\Users\Admin\Documents\GitHub\MC_BadAppleDGDH\Python\bin\v.log

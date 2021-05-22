@@ -31,13 +31,12 @@ import java.io.*;
  *
  * @see "调用的参数和方法"
  * @see Path#pathBinFolder()
- * @see Path#pathChooseVideo()
+ * @see Path#pathChooseMP4()
  * @see Rename#Rename(String)
- * @see Rename#setName()
+ * @see Rename#newName()
  * @see Rename#getNowFilePath()
  * @see Rename#restoreName()
  * @see VideoFolder#VideoFolder(String)
- * @see VideoFolder#setNewFileFolder()
  * @see VideoFolder#getVideoPath()
  * @see VideoFolder#getFolderPath()
  */
@@ -87,23 +86,22 @@ public class FFmpeg {
      * 创建此对象后将引出路径选择器 对所选视频文件进行名称检查和转移
      *
      * @see "调用的参数和方法"
-     * @see Path#pathChooseVideo()
+     * @see Path#pathChooseMP4()
      * @see Rename#Rename(String)
-     * @see Rename#setName()
+     * @see Rename#newName()
      * @see Rename#getNowFilePath()
      * @see Rename#restoreName()
      * @see VideoFolder#VideoFolder(String)
-     * @see VideoFolder#setNewFileFolder()
      */
     public FFmpeg() {
         // 初始化Rename对象
-        video = new Rename(Path.pathChooseVideo());
+        video = new Rename(Path.pathChooseMP4());
         // 原视频文件名称合法化
-        video.setName();
+        video.newName();
         // 初始化VideoFolder对象
         videoFolder = new VideoFolder(video.getNowFilePath());
         // 生成同名文件夹到Bin 复制合法化名称的视频到生成的文件夹
-        videoFolder.setNewFileFolder();
+        videoFolder.newFileFolder(Path.pathBinFolder() + "\\.temp\\");
         // 还原原位的原文件的名称
         video.restoreName();
         // 初始化其他变量
@@ -171,7 +169,7 @@ public class FFmpeg {
             out.close();
         } catch (Exception e) {
             // Error：无法正常的编辑ffs.bat
-            System.out.print("# Error : CannotEditFile[ffs.bat]=");
+            System.out.print("# Error CannotEditFile[ffs.bat]=[FFmpeg.batFFS()]=A=");
             e.printStackTrace();
             return false;
         }
@@ -201,7 +199,7 @@ public class FFmpeg {
                 }
             } catch (Exception e) {
                 // Error：无法正常的读取v.log
-                System.out.print("# Error : CannotReadFile[v.log]=");
+                System.out.print("# Error CannotReadFile[v.log]=[FFmpeg.batFFS()]=B=");
                 e.printStackTrace();
             }
             // 从遍历的所有内容中获取codecName
@@ -246,7 +244,7 @@ public class FFmpeg {
     public boolean batFFR() {
         // 此方法将编辑的bat文件的路径
         String batPath = Path.pathBinFolder() + "\\ffr.bat";
-        // 准备要存入ffr.bat的cmd命令 “-r 8"意为每秒生成8帧图片
+        // 准备要存入ffr.bat的cmd命令 “-r 8"意为每秒生成8帧图片 "explorer.exe + videoFolder.getFolderPath()"意为直接打开目标文件夹
         String cmd = "ffmpeg -i " + videoFolder.getVideoPath() + " -r 8 " + videoFolder.getFolderPath() + "\\%%05d.png\nexplorer.exe " + videoFolder.getFolderPath();
         // 存入命令到ffr.bat
         try {
@@ -257,7 +255,7 @@ public class FFmpeg {
             out.close();
         } catch (Exception e) {
             // Error：无法正常的编辑ffs.bat
-            System.out.print("# Error : CannotEditFile[ffr.bat]=");
+            System.out.print("# Error CannotEditFile[ffr.bat]=[FFmpeg.batFFS()]=A=");
             e.printStackTrace();
             return false;
         }
