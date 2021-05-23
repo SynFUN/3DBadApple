@@ -76,7 +76,7 @@ public class VideoFolder {
     public void newFileFolder(String newFolderPath) {
         folderPath = newFolderPath + originFile.getName().substring(0, originFile.getName().lastIndexOf("."));
         // 路径为项目Bin文件夹下新建originFile的同名文件夹
-        String path = newFolderPath + originFile.getName().substring(0, originFile.getName().length() - 4);
+        String path = folderPath;
         // 创建File对象表示即将创建的文件夹的路径
         File newFolder = new File(path);
         // 判断文件是否已存在 是则进入else
