@@ -1,1 +1,4 @@
-\Minecraft linguist-language=java 
+*.html linguist-language=java
+*.json linguist-language=java
+*.cfg linguist-language=java
+*.sha linguist-language=java
