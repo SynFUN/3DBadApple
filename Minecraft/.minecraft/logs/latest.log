@@ -1,142 +1,184 @@
-[18:24:41] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
-[18:24:41] [main/INFO] [LaunchWrapper]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
-[18:24:41] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
-[18:24:41] [main/INFO] [FML]: Forge Mod Loader version 14.23.5.2779 for Minecraft 1.12.2 loading
-[18:24:41] [main/INFO] [FML]: Java is Java HotSpot(TM) 64-Bit Server VM, version 1.8.0_101, running on Windows 10:amd64:10.0, installed at C:\Program Files\Java\jdk1.8.0_101\jre
-[18:24:41] [main/INFO] [FML]: Searching C:\Users\Admin\Documents\GitHub\MC\【整合包】【自建】1.12.2自然环境综合优化【2.0】\.minecraft\mods for mods
-[18:24:41] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
-[18:24:41] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
-[18:24:41] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
-[18:24:41] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
-[18:24:41] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
-[18:24:42] [main/INFO] [FML]: Found valid fingerprint for Minecraft Forge. Certificate fingerprint e3c3d50c7c986df74c645c0ac54639741c90a557
-[18:24:42] [main/INFO] [FML]: Found valid fingerprint for Minecraft. Certificate fingerprint cd99959656f753dc28d863b46769f7f8fbaefcfc
-[18:24:42] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
-[18:24:42] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
-[18:24:43] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.TerminalTweaker
-[18:24:43] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.TerminalTweaker
-[18:24:43] [main/INFO] [LaunchWrapper]: Launching wrapped minecraft {net.minecraft.client.main.Main}
-[18:24:43] [Client thread/INFO] [net.minecraft.client.Minecraft]: Setting user: RGB YES
-[18:24:46] [Client thread/WARN] [net.minecraft.client.settings.GameSettings]: Skipping bad option: lastServer:
-[18:24:46] [Client thread/INFO] [net.minecraft.client.Minecraft]: LWJGL Version: 2.9.4
-[18:24:46] [Client thread/INFO] [FML]: -- System Details --
+[14:38:51] [main/INFO] [LaunchWrapper]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[14:38:51] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
+[14:38:51] [main/INFO] [FML]: Forge Mod Loader version 14.23.5.2779 for Minecraft 1.12.2 loading
+[14:38:51] [main/INFO] [FML]: Java is Java HotSpot(TM) 64-Bit Server VM, version 1.8.0_101, running on Windows 10:amd64:10.0, installed at C:\Program Files\Java\jdk1.8.0_101\jre
+[14:38:51] [main/INFO] [FML]: Searching C:\Users\Admin\Documents\GitHub\MC_BadAppleDGDH\Minecraft\.minecraft\mods for mods
+[14:38:51] [main/INFO] [FML]: Loading tweaker com.replaymod.core.tweaker.ReplayModTweaker from replaymod-1.12.2-2.5.2.jar
+[14:38:51] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[14:38:51] [main/INFO] [LaunchWrapper]: Loading tweak class name com.replaymod.core.tweaker.ReplayModTweaker
+[14:38:51] [main/INFO] [STDOUT]: [com.replaymod.core.tweaker.ReplayModTweaker:injectMixinTweaker:48]: Injecting MixinTweaker from ReplayModTweaker
+[14:38:51] [main/INFO] [mixin]: SpongePowered MIXIN Subsystem Version=0.8.2 Source=file:/C:/Users/Admin/Documents/GitHub/MC_BadAppleDGDH/Minecraft/.minecraft/mods/replaymod-1.12.2-2.5.2.jar Service=LaunchWrapper Env=CLIENT
+[14:38:51] [main/WARN] [FML]: The coremod com.replaymod.core.LoadingPlugin does not have a MCVersion annotation, it may cause issues with this version of Minecraft
+[14:38:51] [main/WARN] [FML]: The coremod LoadingPlugin (com.replaymod.core.LoadingPlugin) is not signed!
+[14:38:51] [main/INFO] [mixin]: Compatibility level set to JAVA_8
+[14:38:51] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
+[14:38:51] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[14:38:51] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[14:38:51] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
+[14:38:54] [main/INFO] [FML]: Found valid fingerprint for Minecraft Forge. Certificate fingerprint e3c3d50c7c986df74c645c0ac54639741c90a557
+[14:38:54] [main/INFO] [FML]: Found valid fingerprint for Minecraft. Certificate fingerprint cd99959656f753dc28d863b46769f7f8fbaefcfc
+[14:38:54] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
+[14:38:54] [main/INFO] [LaunchWrapper]: Calling tweak class org.spongepowered.asm.launch.MixinTweaker
+[14:38:54] [main/INFO] [mixin]: Initialised Mixin FML Remapper Adapter with net.minecraftforge.fml.common.asm.transformers.deobf.FMLDeobfuscatingRemapper@6a969fb8
+[14:38:54] [main/INFO] [LaunchWrapper]: Calling tweak class com.replaymod.core.tweaker.ReplayModTweaker
+[14:38:54] [main/INFO] [STDOUT]: [com.replaymod.extras.modcore.ModCoreInstaller:fetchString:255]: Fetching https://api.sk1er.club/modcore_versions
+[14:38:56] [main/INFO] [STDOUT]: [com.replaymod.extras.modcore.ModCoreInstaller:initialize:127]: No ModCore target for 1.12.2_forge. This in fine, unless you're specifically looking for ModCore.
+[14:38:56] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
+[14:38:56] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.TerminalTweaker
+[14:38:56] [main/INFO] [LaunchWrapper]: Loading tweak class name org.spongepowered.asm.mixin.EnvironmentStateTweaker
+[14:38:56] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.TerminalTweaker
+[14:38:56] [main/INFO] [LaunchWrapper]: Calling tweak class org.spongepowered.asm.mixin.EnvironmentStateTweaker
+[14:38:57] [main/WARN] [mixin]: Error loading class: net/minecraft/client/renderer/WorldRenderer$LocalRenderInformationContainer (java.lang.ClassNotFoundException: The specified class 'net.minecraft.client.renderer.WorldRenderer$LocalRenderInformationContainer' was not found)
+[14:38:57] [main/WARN] [mixin]: @Mixin target net.minecraft.client.renderer.WorldRenderer$LocalRenderInformationContainer was not found mixins.render.blend.replaymod.json:ContainerLocalRenderInformationAccessor
+[14:38:57] [main/WARN] [mixin]: Error loading class: shadersmod/client/ShadersRender (java.lang.ClassNotFoundException: The specified class 'shadersmod.client.ShadersRender' was not found)
+[14:38:57] [main/WARN] [mixin]: Error loading class: net/optifine/shaders/ShadersRender (java.lang.ClassNotFoundException: The specified class 'net.optifine.shaders.ShadersRender' was not found)
+[14:38:57] [main/INFO] [LaunchWrapper]: Launching wrapped minecraft {net.minecraft.client.main.Main}
+[14:38:58] [Client thread/INFO] [net.minecraft.client.Minecraft]: Setting user: RGB YES
+[14:39:01] [Client thread/WARN] [net.minecraft.client.settings.GameSettings]: Skipping bad option: lastServer:
+[14:39:01] [Client thread/INFO] [net.minecraft.client.Minecraft]: LWJGL Version: 2.9.4
+[14:39:02] [Client thread/INFO] [FML]: -- System Details --
 Details:
 	Minecraft Version: 1.12.2
 	Operating System: Windows 10 (amd64) version 10.0
 	Java Version: 1.8.0_101, Oracle Corporation
 	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
-	Memory: 60320800 bytes (57 MB) / 301989888 bytes (288 MB) up to 4160749568 bytes (3968 MB)
-	JVM Flags: 11 total; -XX:+UnlockExperimentalVMOptions -XX:+UseG1GC -XX:G1NewSizePercent=20 -XX:G1ReservePercent=20 -XX:MaxGCPauseMillis=50 -XX:G1HeapRegionSize=16M -XX:-UseAdaptiveSizePolicy -XX:-OmitStackTraceInFastThrow -Xmn128m -Xmx3968m -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump
+	Memory: 119515640 bytes (113 MB) / 318767104 bytes (304 MB) up to 8589934592 bytes (8192 MB)
+	JVM Flags: 11 total; -XX:+UnlockExperimentalVMOptions -XX:+UseG1GC -XX:G1NewSizePercent=20 -XX:G1ReservePercent=20 -XX:MaxGCPauseMillis=50 -XX:G1HeapRegionSize=16M -XX:-UseAdaptiveSizePolicy -XX:-OmitStackTraceInFastThrow -Xmn128m -Xmx8192m -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump
 	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
 	FML: 
 	Loaded coremods (and transformers): 
+LoadingPlugin (replaymod-1.12.2-2.5.2.jar)
+  
 	GL info: ' Vendor: 'ATI Technologies Inc.' Version: '4.6.13596 Compatibility Profile Context 20.10.32.01 27.20.11032.1001' Renderer: 'AMD Radeon(TM) Graphics'
-[18:24:47] [Client thread/INFO] [FML]: MinecraftForge v14.23.5.2779 Initialized
-[18:24:47] [Client thread/INFO] [FML]: Starts to replace vanilla recipe ingredients with ore ingredients.
-[18:24:47] [Client thread/INFO] [FML]: Replaced 1036 ore ingredients
-[18:24:47] [Client thread/INFO] [FML]: Searching C:\Users\Admin\Documents\GitHub\MC\【整合包】【自建】1.12.2自然环境综合优化【2.0】\.minecraft\mods for mods
-[18:24:48] [Client thread/INFO] [FML]: Forge Mod Loader has identified 4 mods to load
-[18:24:48] [Client thread/INFO] [FML]: Attempting connection with missing mods [minecraft, mcp, FML, forge] at CLIENT
-[18:24:48] [Client thread/INFO] [FML]: Attempting connection with missing mods [minecraft, mcp, FML, forge] at SERVER
-[18:24:48] [Client thread/INFO] [net.minecraft.client.resources.SimpleReloadableResourceManager]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge
-[18:24:48] [Client thread/INFO] [FML]: Processing ObjectHolder annotations
-[18:24:48] [Client thread/INFO] [FML]: Found 1169 ObjectHolder annotations
-[18:24:48] [Client thread/INFO] [FML]: Identifying ItemStackHolder annotations
-[18:24:48] [Client thread/INFO] [FML]: Found 0 ItemStackHolder annotations
-[18:24:48] [Client thread/INFO] [FML]: Configured a dormant chunk cache size of 0
-[18:24:48] [Forge Version Check/INFO] [forge.VersionCheck]: [forge] Starting version check at http://files.minecraftforge.net/maven/net/minecraftforge/forge/promotions_slim.json
-[18:24:48] [Client thread/INFO] [FML]: Applying holder lookups
-[18:24:48] [Client thread/INFO] [FML]: Holder lookups applied
-[18:24:48] [Client thread/INFO] [FML]: Applying holder lookups
-[18:24:48] [Client thread/INFO] [FML]: Holder lookups applied
-[18:24:48] [Client thread/INFO] [FML]: Applying holder lookups
-[18:24:48] [Client thread/INFO] [FML]: Holder lookups applied
-[18:24:48] [Client thread/INFO] [FML]: Applying holder lookups
-[18:24:48] [Client thread/INFO] [FML]: Holder lookups applied
-[18:24:48] [Client thread/INFO] [FML]: Injecting itemstacks
-[18:24:48] [Client thread/INFO] [FML]: Itemstack injection complete
-[18:24:49] [Thread-3/INFO] [FML]: Using sync timing. 200 frames of Display.update took 116802800 nanos
-[18:24:49] [Sound Library Loader/INFO] [net.minecraft.client.audio.SoundManager]: Starting up SoundSystem...
-[18:24:49] [Thread-5/INFO] [net.minecraft.client.audio.SoundManager]: Initializing LWJGL OpenAL
-[18:24:49] [Thread-5/INFO] [net.minecraft.client.audio.SoundManager]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[18:24:50] [Thread-5/INFO] [net.minecraft.client.audio.SoundManager]: OpenAL initialized.
-[18:24:50] [Sound Library Loader/INFO] [net.minecraft.client.audio.SoundManager]: Sound engine started
-[18:24:51] [Forge Version Check/INFO] [forge.VersionCheck]: [forge] Found status: OUTDATED Target: 14.23.5.2855
-[18:24:52] [Client thread/INFO] [FML]: Max texture size: 16384
-[18:24:55] [Client thread/INFO] [net.minecraft.client.renderer.texture.TextureMap]: Created: 512x512 textures-atlas
-[18:24:56] [Client thread/INFO] [FML]: Applying holder lookups
-[18:24:56] [Client thread/INFO] [FML]: Holder lookups applied
-[18:24:56] [Client thread/INFO] [FML]: Injecting itemstacks
-[18:24:56] [Client thread/INFO] [FML]: Itemstack injection complete
-[18:24:56] [Client thread/INFO] [FML]: Forge Mod Loader has successfully loaded 4 mods
-[18:24:56] [Client thread/WARN] [net.minecraft.client.settings.GameSettings]: Skipping bad option: lastServer:
-[18:24:56] [Client thread/INFO] [com.mojang.text2speech.NarratorWindows]: Narrator library for x64 successfully loaded
-[18:24:57] [Realms Notification Availability checker #1/INFO] [com.mojang.realmsclient.client.RealmsClient]: Could not authorize you against Realms server: Invalid session id
-[18:25:03] [Client thread/INFO] [net.minecraft.world.storage.SaveFormatOld]: Deleting level 新的世界的副本
-[18:25:03] [Client thread/INFO] [net.minecraft.world.storage.SaveFormatOld]: Attempt 1...
-[18:25:06] [Client thread/INFO] [net.minecraft.world.storage.SaveFormatOld]: Deleting level 新的世界
-[18:25:06] [Client thread/INFO] [net.minecraft.world.storage.SaveFormatOld]: Attempt 1...
-[18:25:19] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Starting integrated minecraft server version 1.12.2
-[18:25:19] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Generating keypair
-[18:25:19] [Server thread/INFO] [FML]: Injecting existing registry data into this server instance
-[18:25:20] [Server thread/INFO] [FML]: Applying holder lookups
-[18:25:20] [Server thread/INFO] [FML]: Holder lookups applied
-[18:25:20] [Server thread/INFO] [FML]: Loading dimension 0 (test01) (net.minecraft.server.integrated.IntegratedServer@162f6e4e)
-[18:25:20] [Server thread/INFO] [net.minecraft.advancements.AdvancementList]: Loaded 488 advancements
-[18:25:20] [Server thread/INFO] [FML]: Loading dimension -1 (test01) (net.minecraft.server.integrated.IntegratedServer@162f6e4e)
-[18:25:20] [Server thread/INFO] [FML]: Loading dimension 1 (test01) (net.minecraft.server.integrated.IntegratedServer@162f6e4e)
-[18:25:20] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing start region for level 0
-[18:25:21] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing spawn area: 19%
-[18:25:22] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing spawn area: 48%
-[18:25:23] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing spawn area: 73%
-[18:25:24] [Server thread/INFO] [FML]: Unloading dimension -1
-[18:25:24] [Server thread/INFO] [FML]: Unloading dimension 1
-[18:25:24] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Changing view distance to 30, from 10
-[18:25:28] [Netty Local Client IO #0/INFO] [FML]: Server protocol version 2
-[18:25:28] [Netty Server IO #1/INFO] [FML]: Client protocol version 2
-[18:25:28] [Netty Server IO #1/INFO] [FML]: Client attempting to join with 4 mods : minecraft@1.12.2,FML@8.0.99.99,forge@14.23.5.2779,mcp@9.42
-[18:25:28] [Netty Local Client IO #0/INFO] [FML]: [Netty Local Client IO #0] Client side modded connection established
-[18:25:28] [Server thread/INFO] [FML]: [Server thread] Server side modded connection established
-[18:25:28] [Server thread/INFO] [net.minecraft.server.management.PlayerList]: RGB YES[local:E:603298ef] logged in with entity id 865 at (47.5, 64.0, -110.5)
-[18:25:28] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: RGB YES加入了游戏
-[18:25:29] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Saving and pausing game...
-[18:25:29] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level 'test01'/overworld
-[18:25:32] [Server thread/WARN] [net.minecraft.server.MinecraftServer]: Can't keep up! Did the system time change, or is the server overloaded? Running 2162ms behind, skipping 43 tick(s)
-[18:25:56] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Saving and pausing game...
-[18:25:56] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level 'test01'/overworld
-[18:25:57] [Server thread/WARN] [net.minecraft.server.MinecraftServer]: Can't keep up! Did the system time change, or is the server overloaded? Running 4186ms behind, skipping 83 tick(s)
-[18:25:59] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Saving and pausing game...
-[18:25:59] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level 'test01'/overworld
-[18:27:41] [Client thread/INFO] [net.minecraft.advancements.AdvancementList]: Loaded 7 advancements
-[18:29:27] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] 用法：/tp [目标玩家] <目的地玩家> 或 /tp [目标] <x> <y> <z> [<横向朝向> <纵向朝向>]
-[18:29:47] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [RGB YES: 将RGB YES传送到 0.5，0.0，0.5]
-[18:29:47] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] 将RGB YES传送到 0.5，0.0，0.5
-[18:29:52] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: RGB YES掉出了这个世界
-[18:29:52] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] RGB YES掉出了这个世界
-[18:30:02] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: RGB YES掉出了这个世界
-[18:30:02] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [RGB YES: 已清除RGB YES]
-[18:30:02] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] RGB YES掉出了这个世界
-[18:30:02] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] 已清除RGB YES
-[18:31:02] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Saving and pausing game...
-[18:31:02] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level 'test01'/overworld
-[18:32:33] [Client thread/INFO] [net.minecraft.advancements.AdvancementList]: Loaded 16 advancements
-[18:32:34] [Client thread/INFO] [net.minecraft.advancements.AdvancementList]: Loaded 17 advancements
-[18:32:43] [Client thread/INFO] [net.minecraft.advancements.AdvancementList]: Loaded 34 advancements
-[18:33:08] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] 没有名为minecraft:commandblock的物品
-[18:33:22] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Saving and pausing game...
-[18:33:22] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level 'test01'/overworld
-[18:33:28] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Saving and pausing game...
-[18:33:28] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level 'test01'/overworld
-[18:33:30] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Stopping server
-[18:33:30] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving players
-[18:33:30] [Server thread/INFO] [net.minecraft.network.NetHandlerPlayServer]: RGB YES lost connection: 连接中止
-[18:33:30] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: RGB YES退出了游戏
-[18:33:30] [Server thread/INFO] [net.minecraft.network.NetHandlerPlayServer]: Stopping singleplayer server as player logged out
-[18:33:30] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving worlds
-[18:33:30] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level 'test01'/overworld
-[18:33:30] [Server thread/INFO] [FML]: Unloading dimension 0
-[18:33:30] [Server thread/INFO] [FML]: Applying holder lookups
-[18:33:30] [Server thread/INFO] [FML]: Holder lookups applied
-[18:33:33] [Client thread/INFO] [net.minecraft.client.Minecraft]: Stopping!
-[18:33:33] [Client thread/INFO] [net.minecraft.client.audio.SoundManager]: SoundSystem shutting down...
-[18:33:33] [Client thread/WARN] [net.minecraft.client.audio.SoundManager]: Author: Paul Lamb, www.paulscode.com
+[14:39:02] [Client thread/INFO] [FML]: MinecraftForge v14.23.5.2779 Initialized
+[14:39:02] [Client thread/INFO] [FML]: Starts to replace vanilla recipe ingredients with ore ingredients.
+[14:39:02] [Client thread/INFO] [FML]: Replaced 1036 ore ingredients
+[14:39:03] [Client thread/INFO] [FML]: Searching C:\Users\Admin\Documents\GitHub\MC_BadAppleDGDH\Minecraft\.minecraft\mods for mods
+[14:39:03] [Client thread/INFO] [FML]: Disabling mod replaymod-restrictions it is server side only.
+[14:39:04] [Client thread/INFO] [FML]: Forge Mod Loader has identified 5 mods to load
+[14:39:04] [Client thread/INFO] [FML]: Attempting connection with missing mods [minecraft, mcp, FML, forge, replaymod] at CLIENT
+[14:39:04] [Client thread/INFO] [FML]: Attempting connection with missing mods [minecraft, mcp, FML, forge, replaymod] at SERVER
+[14:39:04] [Client thread/WARN] [FML]: =============================================================
+[14:39:04] [Client thread/WARN] [FML]: MOD HAS DIRECT REFERENCE System.exit() THIS IS NOT ALLOWED REROUTING TO FML!
+[14:39:04] [Client thread/WARN] [FML]: Offender: com/replaymod/core/ReplayMod.testIfMoeshAndExitMinecraft()V
+[14:39:04] [Client thread/WARN] [FML]: Use FMLCommonHandler.exitJava instead
+[14:39:04] [Client thread/WARN] [FML]: =============================================================
+[14:39:05] [Thread-3/INFO] [FML]: Using sync timing. 200 frames of Display.update took 184281500 nanos
+[14:39:05] [Client thread/INFO] [net.minecraft.client.resources.SimpleReloadableResourceManager]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Replay Mod
+[14:39:05] [Client thread/WARN] [mixin]: Method overwrite conflict for getHandler in mixins.render.replaymod.json:MixinCamera, previously written by com.replaymod.render.mixin.Mixin_CubicRotation. Skipping method.
+[14:39:05] [Client thread/INFO] [FML]: Processing ObjectHolder annotations
+[14:39:05] [Client thread/INFO] [FML]: Found 1169 ObjectHolder annotations
+[14:39:05] [Client thread/INFO] [FML]: Identifying ItemStackHolder annotations
+[14:39:05] [Client thread/INFO] [FML]: Found 0 ItemStackHolder annotations
+[14:39:05] [Client thread/INFO] [FML]: Configured a dormant chunk cache size of 0
+[14:39:05] [Forge Version Check/INFO] [forge.VersionCheck]: [replaymod] Starting version check at https://raw.githubusercontent.com/ReplayMod/ReplayMod/master/versions.json
+[14:39:05] [Client thread/INFO] [FML]: Applying holder lookups
+[14:39:05] [Client thread/INFO] [FML]: Holder lookups applied
+[14:39:05] [Client thread/INFO] [FML]: Applying holder lookups
+[14:39:05] [Client thread/INFO] [FML]: Holder lookups applied
+[14:39:05] [Client thread/INFO] [FML]: Applying holder lookups
+[14:39:05] [Client thread/INFO] [FML]: Holder lookups applied
+[14:39:05] [Client thread/INFO] [FML]: Applying holder lookups
+[14:39:05] [Client thread/INFO] [FML]: Holder lookups applied
+[14:39:05] [Client thread/INFO] [FML]: Injecting itemstacks
+[14:39:05] [Client thread/INFO] [FML]: Itemstack injection complete
+[14:39:05] [Forge Version Check/INFO] [forge.VersionCheck]: [forge] Starting version check at http://files.minecraftforge.net/maven/net/minecraftforge/forge/promotions_slim.json
+[14:39:06] [Sound Library Loader/INFO] [net.minecraft.client.audio.SoundManager]: Starting up SoundSystem...
+[14:39:06] [Thread-5/INFO] [net.minecraft.client.audio.SoundManager]: Initializing LWJGL OpenAL
+[14:39:06] [Thread-5/INFO] [net.minecraft.client.audio.SoundManager]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[14:39:07] [Thread-5/INFO] [net.minecraft.client.audio.SoundManager]: OpenAL initialized.
+[14:39:07] [Sound Library Loader/INFO] [net.minecraft.client.audio.SoundManager]: Sound engine started
+[14:39:09] [Forge Version Check/INFO] [forge.VersionCheck]: [forge] Found status: OUTDATED Target: 14.23.5.2855
+[14:39:10] [Client thread/INFO] [FML]: Max texture size: 16384
+[14:39:14] [Client thread/INFO] [net.minecraft.client.renderer.texture.TextureMap]: Created: 512x512 textures-atlas
+[14:39:15] [Client thread/INFO] [FML]: Applying holder lookups
+[14:39:15] [Client thread/INFO] [FML]: Holder lookups applied
+[14:39:15] [Client thread/INFO] [FML]: Injecting itemstacks
+[14:39:15] [Client thread/INFO] [FML]: Itemstack injection complete
+[14:39:16] [Client thread/INFO] [FML]: Forge Mod Loader has successfully loaded 5 mods
+[14:39:16] [Client thread/WARN] [net.minecraft.client.settings.GameSettings]: Skipping bad option: lastServer:
+[14:39:16] [Client thread/INFO] [com.mojang.text2speech.NarratorWindows]: Narrator library for x64 successfully loaded
+[14:39:18] [Realms Notification Availability checker #1/INFO] [com.mojang.realmsclient.client.RealmsClient]: Could not authorize you against Realms server: Invalid session id
+[14:39:49] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Starting integrated minecraft server version 1.12.2
+[14:39:49] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Generating keypair
+[14:39:49] [Server thread/INFO] [FML]: Injecting existing registry data into this server instance
+[14:39:49] [Server thread/INFO] [FML]: Applying holder lookups
+[14:39:49] [Server thread/INFO] [FML]: Holder lookups applied
+[14:39:49] [Server thread/INFO] [FML]: Loading dimension 0 (新的世界) (net.minecraft.server.integrated.IntegratedServer@3789e3b5)
+[14:39:50] [Server thread/INFO] [net.minecraft.advancements.AdvancementList]: Loaded 488 advancements
+[14:39:50] [Server thread/INFO] [FML]: Loading dimension -1 (新的世界) (net.minecraft.server.integrated.IntegratedServer@3789e3b5)
+[14:39:50] [Server thread/INFO] [FML]: Loading dimension 1 (新的世界) (net.minecraft.server.integrated.IntegratedServer@3789e3b5)
+[14:39:50] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing start region for level 0
+[14:39:51] [Server thread/INFO] [FML]: Unloading dimension -1
+[14:39:51] [Server thread/INFO] [FML]: Unloading dimension 1
+[14:39:51] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Changing view distance to 30, from 10
+[14:39:56] [Netty Local Client IO #0/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [Replay Mod] 开始录制
+[14:39:58] [Netty Local Client IO #0/INFO] [FML]: Server protocol version 2
+[14:39:58] [Netty Server IO #1/INFO] [FML]: Client protocol version 2
+[14:39:58] [Netty Server IO #1/INFO] [FML]: Client attempting to join with 5 mods : minecraft@1.12.2,FML@8.0.99.99,forge@14.23.5.2779,mcp@9.42,replaymod@1.12.2-2.5.2
+[14:39:58] [Netty Local Client IO #0/INFO] [FML]: [Netty Local Client IO #0] Client side modded connection established
+[14:39:58] [Server thread/INFO] [FML]: [Server thread] Server side modded connection established
+[14:39:58] [Server thread/INFO] [net.minecraft.server.management.PlayerList]: RGB YES[local:E:07471afa] logged in with entity id 0 at (603.5, 4.0, -224.5)
+[14:39:58] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: RGB YES加入了游戏
+[14:39:59] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Saving and pausing game...
+[14:39:59] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level '新的世界'/overworld
+[14:40:02] [Server thread/WARN] [net.minecraft.server.MinecraftServer]: Can't keep up! Did the system time change, or is the server overloaded? Running 2141ms behind, skipping 42 tick(s)
+[14:40:04] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Saving and pausing game...
+[14:40:04] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level '新的世界'/overworld
+[14:40:30] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [RGB YES: 成功将[命令方块]*1给予RGB YES]
+[14:40:30] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] 成功将[命令方块]*1给予RGB YES
+[14:40:34] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Saving and pausing game...
+[14:40:34] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level '新的世界'/overworld
+[14:41:04] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] 成功设置：give @p minecraft:command_block
+[14:41:15] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Saving and pausing game...
+[14:41:15] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level '新的世界'/overworld
+[14:41:19] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@: 成功将[命令方块]*1给予RGB YES]
+[14:41:19] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@: 成功将[命令方块]*1给予RGB YES]
+[14:41:21] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@: 成功将[命令方块]*1给予RGB YES]
+[14:41:21] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@: 成功将[命令方块]*1给予RGB YES]
+[14:41:23] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@: 成功将[命令方块]*1给予RGB YES]
+[14:41:23] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@: 成功将[命令方块]*1给予RGB YES]
+[14:41:25] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@: 成功将[命令方块]*1给予RGB YES]
+[14:41:25] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@: 成功将[命令方块]*1给予RGB YES]
+[14:41:27] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@: 成功将[命令方块]*1给予RGB YES]
+[14:41:27] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@: 成功将[命令方块]*1给予RGB YES]
+[14:41:30] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@: 成功将[命令方块]*1给予RGB YES]
+[14:41:30] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@: 成功将[命令方块]*1给予RGB YES]
+[14:41:34] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@: 成功将[命令方块]*1给予RGB YES]
+[14:41:34] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@: 成功将[命令方块]*1给予RGB YES]
+[14:41:55] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Saving and pausing game...
+[14:41:55] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level '新的世界'/overworld
+[14:41:56] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Saving and pausing game...
+[14:41:56] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level '新的世界'/overworld
+[14:42:04] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] 成功设置：say a
+[14:42:06] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@] a
+[14:42:06] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@] a
+[14:42:09] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Saving and pausing game...
+[14:42:09] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level '新的世界'/overworld
+[14:42:13] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] 成功设置：say b
+[14:42:15] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@] b
+[14:42:15] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@] b
+[14:42:18] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Saving and pausing game...
+[14:42:18] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level '新的世界'/overworld
+[14:42:21] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] 成功设置：say c
+[14:42:23] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Saving and pausing game...
+[14:42:23] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level '新的世界'/overworld
+[14:42:26] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] 成功设置：say d
+[14:42:27] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Saving and pausing game...
+[14:42:28] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level '新的世界'/overworld
+[14:42:30] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] 成功设置：say e
+[14:42:31] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Saving and pausing game...
+[14:42:31] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level '新的世界'/overworld
+[14:42:36] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Stopping server
+[14:42:36] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving players
+[14:42:36] [Server thread/INFO] [net.minecraft.network.NetHandlerPlayServer]: RGB YES lost connection: 连接中止
+[14:42:36] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: RGB YES退出了游戏
+[14:42:36] [Server thread/INFO] [net.minecraft.network.NetHandlerPlayServer]: Stopping singleplayer server as player logged out
+[14:42:36] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving worlds
+[14:42:36] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level '新的世界'/overworld
+[14:42:36] [Server thread/INFO] [FML]: Unloading dimension 0
+[14:42:36] [Server thread/INFO] [FML]: Applying holder lookups
+[14:42:36] [Server thread/INFO] [FML]: Holder lookups applied
+[14:42:59] [Client thread/INFO] [net.minecraft.client.Minecraft]: Stopping!
+[14:42:59] [Client thread/INFO] [net.minecraft.client.audio.SoundManager]: SoundSystem shutting down...
+[14:43:00] [Client thread/WARN] [net.minecraft.client.audio.SoundManager]: Author: Paul Lamb, www.paulscode.com

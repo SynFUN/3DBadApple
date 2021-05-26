@@ -23,7 +23,7 @@
         "javaDir": "",
         "precalledCommand": "",
         "serverIp": "",
-        "java": "1.8.0_152",
+        "java": "Default",
         "wrapper": "",
         "fullscreen": false,
         "noJVMArgs": false,
