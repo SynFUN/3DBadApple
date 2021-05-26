@@ -1,4 +1,4 @@
-/**
+/*
  * @Time : 2021.5.18 14:30
  * @Author : Synthesis 杜品赫
  * @File : ImgToData.java
@@ -131,6 +131,8 @@ public class Image {
 
     public int[][] getValueBlue() { return valueBlue; }
 
+    public String getNewPath() { return newPath; }
+
     /**
      * @return 参数all的长度
      */
@@ -176,8 +178,8 @@ public class Image {
         }
     }
 
-    public boolean toFileFolder(String superFolderPath) {
-        newPath = superFolderPath + "\\" + fileName;
+    public boolean newFileFolder(String superFolderPath) {
+        newPath = superFolderPath + "\\" + fileName.substring(0, fileName.lastIndexOf("."));
         // 创建File对象表示即将创建的文件夹的路径
         File folder = new File(newPath);
         // 如果文件夹不存在 则尝试创建文件夹
@@ -205,9 +207,9 @@ public class Image {
         }
     }
 
-    public void toTXT(String name, String text) {
+    public void newTXT(String name, String text) {
         try {
-            File txt = new File(newPath + "\\" + fileName + name + ".txt");
+            File txt = new File(newPath + "\\" + fileName.substring(0, fileName.lastIndexOf(".")) + name + ".txt");
             txt.createNewFile(); // 创建新文件
             BufferedWriter out = new BufferedWriter(new FileWriter(txt));
             out.write(text); // \r\n即为换行

@@ -1,19 +1,14 @@
-import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
-
-/**
+/*
  * @Time : 2021.5.12 08:56
  * @Author : Synthesis 杜品赫
  * @File : Main.java
  * @Software : IntelliJ IDEA 2020.3.4
  * @JDK : 1.8.0
- * @link :  https://github.com/SynthesisDu/MC_BadAppleDGDH
+ * @link : https://github.com/SynthesisDu/MC_BadAppleDGDH
  */
 
-
 import java.io.File;
-
+import java.util.ArrayList;
 
 public class Main {
 
@@ -40,7 +35,7 @@ public class Main {
             System.out.println("@ MP4 to PNG formed succeed");
         } else { System.out.println("# Error : FFmpeg.batFFR()"); }
 
-        while (getFilesInFolder(ffmpeg.videoFolder.getFolderPath()).size() == 1) {
+        while (getFilesInFolder(ffmpeg.editPath.getFolderPath()).size() == 1) {
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
@@ -48,12 +43,22 @@ public class Main {
             }
         }
 
-        ArrayList<String> names = getFilesInFolder(ffmpeg.videoFolder.getFolderPath());
-        names.remove(names.size()-1);
+        ArrayList<String> names = getFilesInFolder(ffmpeg.editPath.getFolderPath());
+        names.remove(names.size() - 1);
 
         for (String s : names) {
-            Image image = new MonoImage(new File(ffmpeg.videoFolder.getFolderPath() + "\\" + s));
-            System.out.println(image.toString());
+            File file = new File(ffmpeg.editPath.getFolderPath() + "\\" + s);
+            MonoImage image = new MonoImage(file);
+            if (image.newFileFolder(ffmpeg.editPath.getFolderPath())) {
+                image.newTXT("toString", image.toString("#", 1, 1));
+                image.newTXT(image.getFileName().substring(0, image.getFileName().lastIndexOf(".")), image.getWidth() +"\n" + image.getHeight());
+                EditPath.copyFile(file, image.getNewPath());
+            }
+        }
+
+        for (String s : names) {
+            File file = new File(ffmpeg.editPath.getFolderPath() + "\\" + s);
+            file.deleteOnExit();
         }
     }
 }

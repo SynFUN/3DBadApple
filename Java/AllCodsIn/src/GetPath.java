@@ -1,4 +1,4 @@
-/**
+/*
  * @Time : 2021.5.13 15:37
  * @Author : Synthesis 杜品赫
  * @File : Path.java
@@ -17,7 +17,7 @@ import java.io.IOException;
  *
  * @author Synthesis 杜品赫 <https://github.com/SynthesisDu>
  */
-public class Path {
+public class GetPath {
 
     /**
      * 此方法会返回项目的一级文件夹的绝对路径

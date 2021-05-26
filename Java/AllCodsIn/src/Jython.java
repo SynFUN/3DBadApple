@@ -1,4 +1,4 @@
-/**
+/*
  * @Time : 2021.5.11 10:40
  * @Author : Synthesis 杜品赫
  * @File : Jython.java
@@ -23,7 +23,7 @@ import org.python.util.PythonInterpreter;
  *
  * @apiNote Jython.jar
  *
- * @see Path#pathPythonFile()
+ * @see GetPath#pathPythonFile()
  */
 public class Jython {
 
@@ -31,10 +31,10 @@ public class Jython {
      * 此方法将运行项目的另一路径中的Python文件：Python\Mcpi.py
      * <This method will run the Python file in another path: Python\McPi.py>
      *
-     * @see Path#pathPythonFile()
+     * @see GetPath#pathPythonFile()
      */
     public static void runPythonMcpi() {
-        String fileName = Path.pathPythonFile() + "\\Mcpi.py";
+        String fileName = GetPath.pathPythonFile() + "\\Mcpi.py";
         PythonInterpreter pyFile = new PythonInterpreter();
         pyFile.execfile(fileName);
     }
@@ -42,10 +42,10 @@ public class Jython {
     /**
      * 此方法将运行项目的另一路径中的Python文件：Python\ImgToArray.py
      *
-     * @see Path#pathPythonFile()
+     * @see GetPath#pathPythonFile()
      */
     public static void runPythonImgToArray() {
-        String fileName = Path.pathPythonFile() + "\\ImgToArray.py";
+        String fileName = GetPath.pathPythonFile() + "\\ImgToArray.py";
         PythonInterpreter pyFile = new PythonInterpreter();
         pyFile.execfile(fileName);
 }   }

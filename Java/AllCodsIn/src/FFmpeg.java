@@ -1,4 +1,4 @@
-/**
+/*
  * @Time : 2021.5.11 10:41
  * @Author : Synthesis 杜品赫
  * @File : FFmpeg.java
@@ -30,15 +30,15 @@ import java.io.*;
  * @apiNote add FFmpeg to path environment variable
  *
  * @see "调用的参数和方法"
- * @see Path#pathBinFolder()
- * @see Path#pathChooseMP4()
+ * @see GetPath#pathBinFolder()
+ * @see GetPath#pathChooseMP4()
  * @see Rename#Rename(String)
  * @see Rename#newName()
  * @see Rename#getNowFilePath()
  * @see Rename#restoreName()
- * @see VideoFolder#VideoFolder(String)
- * @see VideoFolder#getVideoPath()
- * @see VideoFolder#getFolderPath()
+ * @see EditPath#EditPath(String)
+ * @see EditPath#getVideoPath()
+ * @see EditPath#getFolderPath()
  */
 public class FFmpeg {
 
@@ -56,7 +56,7 @@ public class FFmpeg {
      * @see "被修改"
      * @see #FFmpeg()
      */
-    public final VideoFolder videoFolder;
+    public final EditPath editPath;
 
     /**
      * 用于捕捉ffs.bat生成的log中的视频的宽度
@@ -86,22 +86,22 @@ public class FFmpeg {
      * 创建此对象后将引出路径选择器 对所选视频文件进行名称检查和转移
      *
      * @see "调用的参数和方法"
-     * @see Path#pathChooseMP4()
+     * @see GetPath#pathChooseMP4()
      * @see Rename#Rename(String)
      * @see Rename#newName()
      * @see Rename#getNowFilePath()
      * @see Rename#restoreName()
-     * @see VideoFolder#VideoFolder(String)
+     * @see EditPath#EditPath(String)
      */
     public FFmpeg() {
         // 初始化Rename对象
-        video = new Rename(Path.pathChooseMP4());
+        video = new Rename(GetPath.pathChooseMP4());
         // 原视频文件名称合法化
         video.newName();
         // 初始化VideoFolder对象
-        videoFolder = new VideoFolder(video.getNowFilePath());
+        editPath = new EditPath(video.getNowFilePath());
         // 生成同名文件夹到Bin 复制合法化名称的视频到生成的文件夹
-        videoFolder.newFileFolder(Path.pathBinFolder() + "\\.temp\\");
+        editPath.newFileFolder(GetPath.pathBinFolder() + "\\.temp\\");
         // 还原原位的原文件的名称
         video.restoreName();
         // 初始化其他变量
@@ -152,17 +152,17 @@ public class FFmpeg {
      * @return 仅当出现异常时返回false
      *
      * @see "调用的参数和方法"
-     * @see Path#pathBinFolder()
-     * @see VideoFolder#getVideoPath()
+     * @see GetPath#pathBinFolder()
+     * @see EditPath#getVideoPath()
      */
     public boolean batFFS() {
         // 此方法将编辑的bat文件的路径
-        String batPath = Path.pathBinFolder() + "\\ffs.bat";
+        String batPath = GetPath.pathBinFolder() + "\\ffs.bat";
         // 准备要存入ffs.bat的cmd命令
-        String cmd = "ffprobe -select_streams v -show_entries format=size -show_streams -v quiet -of csv=\"p=0\" -of json -i " + videoFolder.getVideoPath() + " > " + Path.pathBinFolder() + "\\v.log";
+        String cmd = "ffprobe -select_streams v -show_entries format=size -show_streams -v quiet -of csv=\"p=0\" -of json -i " + editPath.getVideoPath() + " > " + GetPath.pathBinFolder() + "\\v.log";
         // 存入命令到ffs.bat
         try {
-            File bat = new File(Path.pathBinFolder() + "\\ffs.bat");
+            File bat = new File(GetPath.pathBinFolder() + "\\ffs.bat");
             BufferedWriter out = new BufferedWriter(new FileWriter(bat));
             out.write(cmd);
             out.flush();
@@ -186,7 +186,7 @@ public class FFmpeg {
             ArrayList<String> allInLog = new ArrayList<>();
             try {
                 // 打开[v.log]到一个File对象
-                File log = new File(Path.pathBinFolder() + "\\v.log");
+                File log = new File(GetPath.pathBinFolder() + "\\v.log");
                 // 建立一个read buffer对象（建立一个输入流对象（建立File输入流对象（File对象）））
                 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(new FileInputStream(log)));
                 // 建立一个字符串用来遍历文件的每一行 (D)-C
@@ -237,18 +237,18 @@ public class FFmpeg {
      * @return 仅当出现异常时返回false
      *
      * @see "调用的参数和方法"
-     * @see Path#pathBinFolder()
-     * @see VideoFolder#getVideoPath()
-     * @see VideoFolder#getFolderPath()
+     * @see GetPath#pathBinFolder()
+     * @see EditPath#getVideoPath()
+     * @see EditPath#getFolderPath()
      */
     public boolean batFFR() {
         // 此方法将编辑的bat文件的路径
-        String batPath = Path.pathBinFolder() + "\\ffr.bat";
+        String batPath = GetPath.pathBinFolder() + "\\ffr.bat";
         // 准备要存入ffr.bat的cmd命令 “-r 8"意为每秒生成8帧图片 "explorer.exe + videoFolder.getFolderPath()"意为直接打开目标文件夹
-        String cmd = "ffmpeg -i " + videoFolder.getVideoPath() + " -r 8 " + videoFolder.getFolderPath() + "\\%%05d.png\nexplorer.exe " + videoFolder.getFolderPath();
+        String cmd = "ffmpeg -i " + editPath.getVideoPath() + " -r 8 " + editPath.getFolderPath() + "\\%%05d.png\nexplorer.exe " + editPath.getFolderPath();
         // 存入命令到ffr.bat
         try {
-            File bat = new File(Path.pathBinFolder() + "\\ffr.bat");
+            File bat = new File(GetPath.pathBinFolder() + "\\ffr.bat");
             BufferedWriter out = new BufferedWriter(new FileWriter(bat));
             out.write(cmd);
             out.flush();
