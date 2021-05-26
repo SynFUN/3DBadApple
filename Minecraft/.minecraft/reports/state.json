@@ -1,5 +1,14 @@
 {
-  "installedMods": [],
+  "installedMods": [
+    "sha256:b404308ac9518fb7ce762278ea2c3ae81ea42c7220e8c2373317da6c31dbb0e0",
+    "sha256:655b664b1a745dff6782ba5eeddaea487b6d6a9a320349a8375bf9a6755bd328",
+    "sha256:c7c7f255b76ff208cac4febf58ddafadcd63bac970dbe0c26dd62c940e80f5b7",
+    "special:minecraft",
+    "sha256:841d2f407824a4a9c3dd872c51ecd76d50381c569b79c3ea7b06b69eec2bba53",
+    "sha256:30d066e27379a51c8d9c67b1ab0b7e55d930c9721161b07ef1666ab9fc24c629",
+    "sha256:145b1c38d46a488e24dde8f8d0df4ae2b4a643a515e069340cc05b7684a8e4f6"
+  ],
   "mainMenuInfoDisplayed": true,
-  "infoNotesDisplayed": true
+  "infoNotesDisplayed": true,
+  "suspendUntilTimestamp": 0
 }
