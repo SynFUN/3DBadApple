@@ -1,0 +1,14 @@
+Metadata-Version: 2.0
+Name: mcapi
+Version: 0.3
+Summary: Simple mc api library
+Home-page: UNKNOWN
+Author: Deaygo
+Author-email: deaygo@thezomg.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: requests
+
+UNKNOWN
+
+
