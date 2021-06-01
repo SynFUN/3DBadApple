@@ -1,0 +1,102 @@
+---- Minecraft Crash Report ----
+
+WARNING: coremods are present:
+  LoadingPlugin (replaymod-1.12.2-2.5.2.jar)
+  OpenEyePlugin (OpenEye.jar)
+Contact their authors BEFORE contacting forge
+
+// You're mean.
+
+Time: 5/31/21 12:01 PM
+Description: Ticking memory connection
+
+java.lang.IllegalArgumentException: ChunkNibbleArrays should be 2048 bytes not: 0
+	at net.minecraft.world.chunk.NibbleArray.<init>(SourceFile:16)
+	at net.minecraft.world.chunk.storage.AnvilChunkLoader.func_75823_a(AnvilChunkLoader.java:449)
+	at net.minecraft.world.chunk.storage.AnvilChunkLoader.checkedReadChunkFromNBT__Async(AnvilChunkLoader.java:128)
+	at net.minecraft.world.chunk.storage.AnvilChunkLoader.loadChunk__Async(AnvilChunkLoader.java:92)
+	at net.minecraftforge.common.chunkio.ChunkIOProvider.run(ChunkIOProvider.java:70)
+	at net.minecraftforge.common.chunkio.ChunkIOExecutor.syncChunkLoad(ChunkIOExecutor.java:86)
+	at net.minecraft.world.gen.ChunkProviderServer.loadChunk(ChunkProviderServer.java:118)
+	at net.minecraft.world.gen.ChunkProviderServer.func_186028_c(ChunkProviderServer.java:89)
+	at net.minecraft.world.gen.ChunkProviderServer.func_186025_d(ChunkProviderServer.java:135)
+	at net.minecraft.server.management.PlayerList.func_72375_a(PlayerList.java:291)
+	at net.minecraft.server.management.PlayerList.func_72377_c(PlayerList.java:378)
+	at net.minecraft.server.management.PlayerList.initializeConnectionToPlayer(PlayerList.java:166)
+	at net.minecraftforge.fml.common.network.handshake.NetworkDispatcher.completeServerSideConnection(NetworkDispatcher.java:255)
+	at net.minecraftforge.fml.common.network.handshake.NetworkDispatcher.access$100(NetworkDispatcher.java:72)
+	at net.minecraftforge.fml.common.network.handshake.NetworkDispatcher$1.func_73660_a(NetworkDispatcher.java:205)
+	at net.minecraft.network.NetworkManager.func_74428_b(NetworkManager.java:285)
+	at net.minecraft.network.NetworkSystem.func_151269_c(NetworkSystem.java:180)
+	at net.minecraft.server.MinecraftServer.func_71190_q(MinecraftServer.java:790)
+	at net.minecraft.server.MinecraftServer.func_71217_p(MinecraftServer.java:668)
+	at net.minecraft.server.integrated.IntegratedServer.func_71217_p(IntegratedServer.java:185)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:526)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Stacktrace:
+	at net.minecraft.world.chunk.NibbleArray.<init>(SourceFile:16)
+	at net.minecraft.world.chunk.storage.AnvilChunkLoader.func_75823_a(AnvilChunkLoader.java:449)
+	at net.minecraft.world.chunk.storage.AnvilChunkLoader.checkedReadChunkFromNBT__Async(AnvilChunkLoader.java:128)
+	at net.minecraft.world.chunk.storage.AnvilChunkLoader.loadChunk__Async(AnvilChunkLoader.java:92)
+	at net.minecraftforge.common.chunkio.ChunkIOProvider.run(ChunkIOProvider.java:70)
+	at net.minecraftforge.common.chunkio.ChunkIOExecutor.syncChunkLoad(ChunkIOExecutor.java:86)
+	at net.minecraft.world.gen.ChunkProviderServer.loadChunk(ChunkProviderServer.java:118)
+	at net.minecraft.world.gen.ChunkProviderServer.func_186028_c(ChunkProviderServer.java:89)
+	at net.minecraft.world.gen.ChunkProviderServer.func_186025_d(ChunkProviderServer.java:135)
+	at net.minecraft.server.management.PlayerList.func_72375_a(PlayerList.java:291)
+	at net.minecraft.server.management.PlayerList.func_72377_c(PlayerList.java:378)
+	at net.minecraft.server.management.PlayerList.initializeConnectionToPlayer(PlayerList.java:166)
+	at net.minecraftforge.fml.common.network.handshake.NetworkDispatcher.completeServerSideConnection(NetworkDispatcher.java:255)
+	at net.minecraftforge.fml.common.network.handshake.NetworkDispatcher.access$100(NetworkDispatcher.java:72)
+	at net.minecraftforge.fml.common.network.handshake.NetworkDispatcher$1.func_73660_a(NetworkDispatcher.java:205)
+	at net.minecraft.network.NetworkManager.func_74428_b(NetworkManager.java:285)
+
+-- Ticking connection --
+Details:
+	Connection: net.minecraft.network.NetworkManager@18ba1b75
+Stacktrace:
+	at net.minecraft.network.NetworkSystem.func_151269_c(NetworkSystem.java:180)
+	at net.minecraft.server.MinecraftServer.func_71190_q(MinecraftServer.java:790)
+	at net.minecraft.server.MinecraftServer.func_71217_p(MinecraftServer.java:668)
+	at net.minecraft.server.integrated.IntegratedServer.func_71217_p(IntegratedServer.java:185)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:526)
+	at java.lang.Thread.run(Thread.java:745)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.12.2
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_101, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 6671833408 bytes (6362 MB) / 6979321856 bytes (6656 MB) up to 8589934592 bytes (8192 MB)
+	JVM Flags: 11 total; -XX:+UnlockExperimentalVMOptions -XX:+UseG1GC -XX:G1NewSizePercent=20 -XX:G1ReservePercent=20 -XX:MaxGCPauseMillis=50 -XX:G1HeapRegionSize=16M -XX:-UseAdaptiveSizePolicy -XX:-OmitStackTraceInFastThrow -Xmn128m -Xmx8192m -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP 9.42 Powered by Forge 14.23.5.2779 6 mods loaded, 6 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+
+	| State     | ID        | Version      | Source                        | Signature                                |
+	|:--------- |:--------- |:------------ |:----------------------------- |:---------------------------------------- |
+	| UCHIJAAAA | minecraft | 1.12.2       | minecraft.jar                 | None                                     |
+	| UCHIJAAAA | mcp       | 9.42         | minecraft.jar                 | None                                     |
+	| UCHIJAAAA | FML       | 8.0.99.99    | forge-1.12.2-14.23.5.2779.jar | e3c3d50c7c986df74c645c0ac54639741c90a557 |
+	| UCHIJAAAA | forge     | 14.23.5.2779 | forge-1.12.2-14.23.5.2779.jar | e3c3d50c7c986df74c645c0ac54639741c90a557 |
+	| UCHIJAAAA | OpenEye   | 0.8          | OpenEye.jar                   | None                                     |
+	| UCHIJAAAA | replaymod | 1.12.2-2.5.2 | replaymod-1.12.2-2.5.2.jar    | None                                     |
+
+	Loaded coremods (and transformers): 
+LoadingPlugin (replaymod-1.12.2-2.5.2.jar)
+  
+OpenEyePlugin (OpenEye.jar)
+  openeye.asm.MultiTransformer
+	GL info: ~~ERROR~~ RuntimeException: No OpenGL context found in the current thread.
+	Profiler Position: N/A (disabled)
+	Player Count: 1 / 8; [EntityPlayerMP['RGB YES'/57, l='新的世界', x=-0.95, y=4.00, z=1.72]]
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
