@@ -1,12 +1,11 @@
-# -*- coding:936 -*-
-import mcpi.block as block
-import mcpi.minecraft as minecraft
-import time
+from mcpi.minecraft import Minecraft
+from mcpi import block
+from mcpi import event
+from time import sleep
 
-mc = minecraft.Minecraft.create()
-while True:
-    time.sleep(1)
-    pos = mc.player.getTilePos()
-    mc.postToChat(" x = " + str(pos.x) + "  y = " + str(pos.y) + "  z = " + str(pos.z))
-
+mc = Minecraft.create()
+mc.setBlocks(0, 0, 0, 5, 5, 5, block.GOLD_BLOCK.data)
+mc.setBlocks(0, 0, 0, 5, 5, 5, block.GOLD_BLOCK.id)
+mc.player.setPos(5, 5, 6)
+mc.postToChat("wdnmd")
 

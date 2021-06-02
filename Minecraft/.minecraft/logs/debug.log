@@ -5406,3 +5406,308 @@ java.net.UnknownHostException: raw.githubusercontent.com
 [09:22:16] [Server thread/WARN] [net.minecraft.server.MinecraftServer]: Can't keep up! Did the system time change, or is the server overloaded? Running 1037993ms behind, skipping 20759 tick(s)
 [10:54:08] [Server thread/WARN] [net.minecraft.server.MinecraftServer]: Can't keep up! Did the system time change, or is the server overloaded? Running 104205ms behind, skipping 2084 tick(s)
 [11:17:21] [Server thread/WARN] [net.minecraft.server.MinecraftServer]: Can't keep up! Did the system time change, or is the server overloaded? Running 1377269ms behind, skipping 27545 tick(s)
+[11:58:21] [Server thread/DEBUG] [FML]: Gathering id map for writing to world save 新的世界
+[11:58:29] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [RGB YES: 将RGB YES传送到 10.5，10.0，10.5]
+[11:58:29] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] 将RGB YES传送到 10.5，10.0，10.5
+[11:58:49] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Saving and pausing game...
+[11:58:49] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level '新的世界'/overworld
+[11:58:49] [Server thread/DEBUG] [FML]: Gathering id map for writing to world save 新的世界
+[11:59:38] [Server thread/DEBUG] [FML]: Gathering id map for writing to world save 新的世界
+[11:59:50] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@: 已填充2个方块]
+[11:59:50] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@: 已填充2个方块]
+[11:59:50] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@] a2
+[11:59:50] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@] b0
+[11:59:50] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@] b1
+[11:59:50] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@] b2
+[11:59:50] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@] b3
+[11:59:50] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@] c0
+[11:59:50] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@] c1
+[11:59:50] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@] d0
+[11:59:50] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@] d1
+[11:59:50] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@] e0
+[11:59:50] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@] e1
+[11:59:50] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@] f0
+[11:59:50] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@] f1
+[11:59:50] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@: 已填充2个方块]
+[11:59:50] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@: 已填充2个方块]
+[11:59:50] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@] a2
+[11:59:50] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@] b0
+[11:59:50] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@] b1
+[11:59:50] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@] b2
+[11:59:50] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@] b3
+[11:59:50] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@] c0
+[11:59:50] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@] c1
+[11:59:50] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@] d0
+[11:59:50] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@] d1
+[11:59:50] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@] e0
+[11:59:50] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@] e1
+[11:59:50] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@] f0
+[11:59:50] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@] f1
+[11:59:57] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@: 已填充2个方块]
+[11:59:57] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@: 已填充2个方块]
+[11:59:57] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@] a2
+[11:59:57] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@] b0
+[11:59:57] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@] b1
+[11:59:57] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@] b2
+[11:59:57] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@] b3
+[11:59:57] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@] c0
+[11:59:57] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@] c1
+[11:59:57] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@] d0
+[11:59:57] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@] d1
+[11:59:57] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@] e0
+[11:59:57] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@] e1
+[11:59:57] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@] f0
+[11:59:57] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@] f1
+[11:59:57] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@: 已填充2个方块]
+[11:59:57] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@: 已填充2个方块]
+[11:59:57] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@] a2
+[11:59:57] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@] b0
+[11:59:57] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@] b1
+[11:59:57] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@] b2
+[11:59:57] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@] b3
+[11:59:57] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@] c0
+[11:59:57] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@] c1
+[11:59:57] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@] d0
+[11:59:57] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@] d1
+[11:59:57] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@] e0
+[11:59:57] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@] e1
+[11:59:57] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@] f0
+[11:59:57] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@] f1
+[12:00:00] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Saving and pausing game...
+[12:00:00] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level '新的世界'/overworld
+[12:00:00] [Server thread/DEBUG] [FML]: Gathering id map for writing to world save 新的世界
+[12:23:49] [Server thread/DEBUG] [FML]: Gathering id map for writing to world save 新的世界
+[12:24:34] [Server thread/DEBUG] [FML]: Gathering id map for writing to world save 新的世界
+[12:25:19] [Server thread/DEBUG] [FML]: Gathering id map for writing to world save 新的世界
+[12:26:04] [Server thread/DEBUG] [FML]: Gathering id map for writing to world save 新的世界
+[12:26:49] [Server thread/DEBUG] [FML]: Gathering id map for writing to world save 新的世界
+[12:27:34] [Server thread/DEBUG] [FML]: Gathering id map for writing to world save 新的世界
+[12:28:19] [Server thread/DEBUG] [FML]: Gathering id map for writing to world save 新的世界
+[12:29:04] [Server thread/DEBUG] [FML]: Gathering id map for writing to world save 新的世界
+[12:29:49] [Server thread/DEBUG] [FML]: Gathering id map for writing to world save 新的世界
+[12:34:15] [Server thread/WARN] [net.minecraft.server.MinecraftServer]: Can't keep up! Did the system time change, or is the server overloaded? Running 254623ms behind, skipping 5092 tick(s)
+[12:34:46] [Server thread/DEBUG] [FML]: Gathering id map for writing to world save 新的世界
+[12:35:31] [Server thread/DEBUG] [FML]: Gathering id map for writing to world save 新的世界
+[12:36:16] [Server thread/DEBUG] [FML]: Gathering id map for writing to world save 新的世界
+[12:37:01] [Server thread/DEBUG] [FML]: Gathering id map for writing to world save 新的世界
+[12:37:46] [Server thread/DEBUG] [FML]: Gathering id map for writing to world save 新的世界
+[12:38:31] [Server thread/DEBUG] [FML]: Gathering id map for writing to world save 新的世界
+[12:39:16] [Server thread/DEBUG] [FML]: Gathering id map for writing to world save 新的世界
+[12:40:01] [Server thread/DEBUG] [FML]: Gathering id map for writing to world save 新的世界
+[12:40:46] [Server thread/DEBUG] [FML]: Gathering id map for writing to world save 新的世界
+[12:41:31] [Server thread/DEBUG] [FML]: Gathering id map for writing to world save 新的世界
+[12:42:16] [Server thread/DEBUG] [FML]: Gathering id map for writing to world save 新的世界
+[12:43:01] [Server thread/DEBUG] [FML]: Gathering id map for writing to world save 新的世界
+[12:43:46] [Server thread/DEBUG] [FML]: Gathering id map for writing to world save 新的世界
+[12:44:31] [Server thread/DEBUG] [FML]: Gathering id map for writing to world save 新的世界
+[12:45:16] [Server thread/DEBUG] [FML]: Gathering id map for writing to world save 新的世界
+[12:46:01] [Server thread/DEBUG] [FML]: Gathering id map for writing to world save 新的世界
+[12:46:46] [Server thread/DEBUG] [FML]: Gathering id map for writing to world save 新的世界
+[12:47:31] [Server thread/DEBUG] [FML]: Gathering id map for writing to world save 新的世界
+[12:48:16] [Server thread/DEBUG] [FML]: Gathering id map for writing to world save 新的世界
+[12:49:01] [Server thread/DEBUG] [FML]: Gathering id map for writing to world save 新的世界
+[12:49:46] [Server thread/DEBUG] [FML]: Gathering id map for writing to world save 新的世界
+[12:50:31] [Server thread/DEBUG] [FML]: Gathering id map for writing to world save 新的世界
+[12:51:16] [Server thread/DEBUG] [FML]: Gathering id map for writing to world save 新的世界
+[12:52:01] [Server thread/DEBUG] [FML]: Gathering id map for writing to world save 新的世界
+[12:52:46] [Server thread/DEBUG] [FML]: Gathering id map for writing to world save 新的世界
+[12:53:31] [Server thread/DEBUG] [FML]: Gathering id map for writing to world save 新的世界
+[12:54:16] [Server thread/DEBUG] [FML]: Gathering id map for writing to world save 新的世界
+[12:55:01] [Server thread/DEBUG] [FML]: Gathering id map for writing to world save 新的世界
+[12:55:46] [Server thread/DEBUG] [FML]: Gathering id map for writing to world save 新的世界
+[12:56:31] [Server thread/DEBUG] [FML]: Gathering id map for writing to world save 新的世界
+[12:56:37] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Saving and pausing game...
+[12:56:37] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level '新的世界'/overworld
+[12:56:37] [Server thread/DEBUG] [FML]: Gathering id map for writing to world save 新的世界
+[12:56:44] [Thread-32/INFO] [STDOUT]: [mobi.omegacentauri.raspberryjammod.APIServer:socketCommunicate:149]: java.net.SocketException: Connection reset
+[12:58:45] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Saving and pausing game...
+[12:58:45] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level '新的世界'/overworld
+[12:58:45] [Server thread/DEBUG] [FML]: Gathering id map for writing to world save 新的世界
+[12:59:17] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@: 已填充1个方块]
+[12:59:17] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@] a2
+[12:59:17] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@] b0
+[12:59:17] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@] b1
+[12:59:17] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@] b2
+[12:59:17] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@: 已填充1个方块]
+[12:59:17] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@] a2
+[12:59:17] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@] b3
+[12:59:17] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@] b0
+[12:59:17] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@] c0
+[12:59:17] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@] c1
+[12:59:17] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@] d0
+[12:59:17] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@] d1
+[12:59:17] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@] e0
+[12:59:17] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@] e1
+[12:59:17] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@] f0
+[12:59:17] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@] f1
+[12:59:17] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@] b1
+[12:59:17] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@] b2
+[12:59:17] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@] b3
+[12:59:17] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@] c0
+[12:59:17] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@] c1
+[12:59:17] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@] d0
+[12:59:17] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@] d1
+[12:59:17] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@] e0
+[12:59:17] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@] e1
+[12:59:17] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@] f0
+[12:59:17] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@] f1
+[12:59:22] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@: 已填充2个方块]
+[12:59:22] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@: 已填充2个方块]
+[12:59:22] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@] a2
+[12:59:22] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@] b0
+[12:59:22] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@] b1
+[12:59:22] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@] b2
+[12:59:22] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@] b3
+[12:59:22] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@] c0
+[12:59:22] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@] c1
+[12:59:22] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@] d0
+[12:59:22] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@] d1
+[12:59:22] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@] e0
+[12:59:22] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@] e1
+[12:59:22] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@] f0
+[12:59:22] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@] f1
+[12:59:22] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@: 已填充2个方块]
+[12:59:22] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@: 已填充2个方块]
+[12:59:22] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@] a2
+[12:59:22] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@] b0
+[12:59:22] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@] b1
+[12:59:22] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@] b2
+[12:59:22] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@] b3
+[12:59:22] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@] c0
+[12:59:22] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@] c1
+[12:59:22] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@] d0
+[12:59:22] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@] d1
+[12:59:22] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@] e0
+[12:59:22] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@] e1
+[12:59:22] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@] f0
+[12:59:22] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@] f1
+[12:59:27] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Saving and pausing game...
+[12:59:27] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level '新的世界'/overworld
+[12:59:27] [Server thread/DEBUG] [FML]: Gathering id map for writing to world save 新的世界
+[13:12:40] [Server thread/DEBUG] [FML]: Gathering id map for writing to world save 新的世界
+[13:12:50] [Server thread/INFO] [STDOUT]: [mobi.omegacentauri.raspberryjammod.ScriptExternalCommand:func_184881_a:275]: Running mcpipy\test.py
+[13:12:50] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [ERR] Traceback (most recent call last):
+[13:12:50] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [ERR]   File "test.py", line 7, in <module>
+[13:12:50] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [ERR]     mc.setBlocks(0, 0, 0, 5, 5, 5, 0)
+[13:12:50] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [ERR] AttributeError: 'function' object has no attribute 'setBlocks'
+[13:13:14] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Saving and pausing game...
+[13:13:14] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level '新的世界'/overworld
+[13:13:14] [Server thread/DEBUG] [FML]: Gathering id map for writing to world save 新的世界
+[13:14:19] [Server thread/DEBUG] [FML]: Gathering id map for writing to world save 新的世界
+[13:14:28] [Server thread/INFO] [STDOUT]: [mobi.omegacentauri.raspberryjammod.ScriptExternalCommand:func_184881_a:275]: Running mcpipy\test.py
+[13:14:37] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] 未知命令。请使用/help来查看命令列表。
+[13:14:41] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] 未知命令。请使用/help来查看命令列表。
+[13:14:45] [Server thread/INFO] [STDOUT]: [mobi.omegacentauri.raspberryjammod.ScriptExternalCommand:func_184881_a:275]: Running mcpipy\test.py
+[13:15:04] [Server thread/DEBUG] [FML]: Gathering id map for writing to world save 新的世界
+[13:15:21] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Saving and pausing game...
+[13:15:22] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level '新的世界'/overworld
+[13:15:22] [Server thread/DEBUG] [FML]: Gathering id map for writing to world save 新的世界
+[13:21:52] [Server thread/INFO] [STDOUT]: [mobi.omegacentauri.raspberryjammod.ScriptExternalCommand:func_184881_a:275]: Running mcpipy\test.py
+[13:21:52] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] wdnmd
+[13:22:11] [Server thread/DEBUG] [FML]: Gathering id map for writing to world save 新的世界
+[13:22:13] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Saving and pausing game...
+[13:22:13] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level '新的世界'/overworld
+[13:22:13] [Server thread/DEBUG] [FML]: Gathering id map for writing to world save 新的世界
+[13:23:53] [Server thread/INFO] [STDOUT]: [mobi.omegacentauri.raspberryjammod.ScriptExternalCommand:func_184881_a:275]: Running mcpipy\test.py
+[13:23:53] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [ERR] Traceback (most recent call last):
+[13:23:53] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [ERR]   File "test.py", line 9, in <module>
+[13:23:53] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [ERR]     mc.setPos(5, 5, 6)
+[13:23:53] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [ERR] AttributeError: 'Minecraft' object has no attribute 'setPos'
+[13:24:01] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Saving and pausing game...
+[13:24:01] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level '新的世界'/overworld
+[13:24:01] [Server thread/DEBUG] [FML]: Gathering id map for writing to world save 新的世界
+[13:25:48] [Server thread/INFO] [STDOUT]: [mobi.omegacentauri.raspberryjammod.ScriptExternalCommand:func_184881_a:275]: Running mcpipy\test.py
+[13:25:48] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] wdnmd
+[13:26:09] [Server thread/DEBUG] [FML]: Gathering id map for writing to world save 新的世界
+[13:26:54] [Server thread/DEBUG] [FML]: Gathering id map for writing to world save 新的世界
+[13:27:19] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Saving and pausing game...
+[13:27:19] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level '新的世界'/overworld
+[13:27:19] [Server thread/DEBUG] [FML]: Gathering id map for writing to world save 新的世界
+[13:27:20] [Server thread/TRACE] [FML]: Sending event FMLServerStoppingEvent to mod minecraft
+[13:27:20] [Server thread/TRACE] [FML]: Sent event FMLServerStoppingEvent to mod minecraft
+[13:27:20] [Server thread/DEBUG] [FML]: Bar Step: ServerStopping - Minecraft took 0.001s
+[13:27:20] [Server thread/TRACE] [FML]: Sending event FMLServerStoppingEvent to mod mcp
+[13:27:20] [Server thread/TRACE] [FML]: Sent event FMLServerStoppingEvent to mod mcp
+[13:27:20] [Server thread/DEBUG] [FML]: Bar Step: ServerStopping - Minecraft Coder Pack took 0.000s
+[13:27:20] [Server thread/TRACE] [FML]: Sending event FMLServerStoppingEvent to mod FML
+[13:27:20] [Server thread/TRACE] [FML]: Sent event FMLServerStoppingEvent to mod FML
+[13:27:20] [Server thread/DEBUG] [FML]: Bar Step: ServerStopping - Forge Mod Loader took 0.000s
+[13:27:20] [Server thread/TRACE] [FML]: Sending event FMLServerStoppingEvent to mod forge
+[13:27:20] [Server thread/TRACE] [FML]: Sent event FMLServerStoppingEvent to mod forge
+[13:27:20] [Server thread/DEBUG] [FML]: Bar Step: ServerStopping - Minecraft Forge took 0.000s
+[13:27:20] [Server thread/TRACE] [FML]: Sending event FMLServerStoppingEvent to mod OpenEye
+[13:27:20] [Server thread/TRACE] [FML]: Sent event FMLServerStoppingEvent to mod OpenEye
+[13:27:20] [Server thread/DEBUG] [FML]: Bar Step: ServerStopping - OpenEye took 0.000s
+[13:27:20] [Server thread/TRACE] [FML]: Sending event FMLServerStoppingEvent to mod replaymod
+[13:27:20] [Server thread/TRACE] [FML]: Sent event FMLServerStoppingEvent to mod replaymod
+[13:27:20] [Server thread/DEBUG] [FML]: Bar Step: ServerStopping - Replay Mod took 0.000s
+[13:27:20] [Server thread/TRACE] [FML]: Sending event FMLServerStoppingEvent to mod raspberryjammod
+[13:27:20] [Server thread/INFO] [STDOUT]: [mobi.omegacentauri.raspberryjammod.APIServer:close:173]: Closing sockets
+[13:27:20] [Thread-33/INFO] [STDOUT]: [mobi.omegacentauri.raspberryjammod.APIServer:socketCommunicate:149]: java.net.SocketException: socket closed
+[13:27:20] [Thread-23/INFO] [STDOUT]: [mobi.omegacentauri.raspberryjammod.RaspberryJamMod$1:run:212]: Closing RaspberryJamMod
+[13:27:20] [Thread-23/INFO] [STDOUT]: [mobi.omegacentauri.raspberryjammod.APIServer:close:173]: Closing sockets
+[13:27:20] [Server thread/INFO] [STDOUT]: [mobi.omegacentauri.raspberryjammod.RaspberryJamMod:unregisterCommand:272]: Found command set field field_71561_b
+[13:27:20] [Server thread/INFO] [STDOUT]: [mobi.omegacentauri.raspberryjammod.RaspberryJamMod:unregisterCommand:272]: Found command set field field_71561_b
+[13:27:20] [Server thread/TRACE] [FML]: Sent event FMLServerStoppingEvent to mod raspberryjammod
+[13:27:20] [Server thread/DEBUG] [FML]: Bar Step: ServerStopping - Raspberry Jam Mod took 0.004s
+[13:27:20] [Server thread/DEBUG] [FML]: Bar Finished: ServerStopping took 0.006s
+[13:27:20] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Stopping server
+[13:27:20] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving players
+[13:27:20] [Server thread/INFO] [net.minecraft.network.NetHandlerPlayServer]: RGB YES lost connection: 连接中止
+[13:27:20] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: RGB YES退出了游戏
+[13:27:20] [Server thread/INFO] [net.minecraft.network.NetHandlerPlayServer]: Stopping singleplayer server as player logged out
+[13:27:20] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving worlds
+[13:27:20] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level '新的世界'/overworld
+[13:27:20] [Server thread/DEBUG] [FML]: Gathering id map for writing to world save 新的世界
+[13:27:20] [Server thread/INFO] [FML]: Unloading dimension 0
+[13:27:20] [Server thread/DEBUG] [FML]: Reverting to frozen data state.
+[13:27:20] [Server thread/TRACE] [FML]: Sending event FMLModIdMappingEvent to mod minecraft
+[13:27:20] [Server thread/TRACE] [FML]: Sent event FMLModIdMappingEvent to mod minecraft
+[13:27:20] [Server thread/DEBUG] [FML]: Bar Step: ModIdMapping - Minecraft took 0.000s
+[13:27:20] [Server thread/TRACE] [FML]: Sending event FMLModIdMappingEvent to mod mcp
+[13:27:20] [Server thread/TRACE] [FML]: Sent event FMLModIdMappingEvent to mod mcp
+[13:27:20] [Server thread/DEBUG] [FML]: Bar Step: ModIdMapping - Minecraft Coder Pack took 0.000s
+[13:27:20] [Server thread/TRACE] [FML]: Sending event FMLModIdMappingEvent to mod FML
+[13:27:20] [Server thread/TRACE] [FML]: Sent event FMLModIdMappingEvent to mod FML
+[13:27:20] [Server thread/DEBUG] [FML]: Bar Step: ModIdMapping - Forge Mod Loader took 0.000s
+[13:27:20] [Server thread/TRACE] [FML]: Sending event FMLModIdMappingEvent to mod forge
+[13:27:20] [Server thread/TRACE] [FML]: Sent event FMLModIdMappingEvent to mod forge
+[13:27:20] [Server thread/DEBUG] [FML]: Bar Step: ModIdMapping - Minecraft Forge took 0.063s
+[13:27:20] [Server thread/TRACE] [FML]: Sending event FMLModIdMappingEvent to mod OpenEye
+[13:27:20] [Server thread/TRACE] [FML]: Sent event FMLModIdMappingEvent to mod OpenEye
+[13:27:20] [Server thread/DEBUG] [FML]: Bar Step: ModIdMapping - OpenEye took 0.000s
+[13:27:20] [Server thread/TRACE] [FML]: Sending event FMLModIdMappingEvent to mod replaymod
+[13:27:20] [Server thread/TRACE] [FML]: Sent event FMLModIdMappingEvent to mod replaymod
+[13:27:20] [Server thread/DEBUG] [FML]: Bar Step: ModIdMapping - Replay Mod took 0.000s
+[13:27:20] [Server thread/TRACE] [FML]: Sending event FMLModIdMappingEvent to mod raspberryjammod
+[13:27:20] [Server thread/TRACE] [FML]: Sent event FMLModIdMappingEvent to mod raspberryjammod
+[13:27:20] [Server thread/DEBUG] [FML]: Bar Step: ModIdMapping - Raspberry Jam Mod took 0.000s
+[13:27:20] [Server thread/DEBUG] [FML]: Bar Finished: ModIdMapping took 0.064s
+[13:27:20] [Server thread/INFO] [FML]: Applying holder lookups
+[13:27:20] [Server thread/INFO] [FML]: Holder lookups applied
+[13:27:20] [Server thread/DEBUG] [FML]: Frozen state restored.
+[13:27:20] [Server thread/TRACE] [FML]: Sending event FMLServerStoppedEvent to mod minecraft
+[13:27:20] [Server thread/TRACE] [FML]: Sent event FMLServerStoppedEvent to mod minecraft
+[13:27:20] [Server thread/DEBUG] [FML]: Bar Step: ServerStopped - Minecraft took 0.000s
+[13:27:20] [Server thread/TRACE] [FML]: Sending event FMLServerStoppedEvent to mod mcp
+[13:27:20] [Server thread/TRACE] [FML]: Sent event FMLServerStoppedEvent to mod mcp
+[13:27:20] [Server thread/DEBUG] [FML]: Bar Step: ServerStopped - Minecraft Coder Pack took 0.000s
+[13:27:20] [Server thread/TRACE] [FML]: Sending event FMLServerStoppedEvent to mod FML
+[13:27:20] [Server thread/TRACE] [FML]: Sent event FMLServerStoppedEvent to mod FML
+[13:27:20] [Server thread/DEBUG] [FML]: Bar Step: ServerStopped - Forge Mod Loader took 0.000s
+[13:27:20] [Server thread/TRACE] [FML]: Sending event FMLServerStoppedEvent to mod forge
+[13:27:20] [Server thread/TRACE] [FML]: Sent event FMLServerStoppedEvent to mod forge
+[13:27:20] [Server thread/DEBUG] [FML]: Bar Step: ServerStopped - Minecraft Forge took 0.000s
+[13:27:20] [Server thread/TRACE] [FML]: Sending event FMLServerStoppedEvent to mod OpenEye
+[13:27:20] [Server thread/TRACE] [FML]: Sent event FMLServerStoppedEvent to mod OpenEye
+[13:27:20] [Server thread/DEBUG] [FML]: Bar Step: ServerStopped - OpenEye took 0.000s
+[13:27:20] [Server thread/TRACE] [FML]: Sending event FMLServerStoppedEvent to mod replaymod
+[13:27:20] [Server thread/TRACE] [FML]: Sent event FMLServerStoppedEvent to mod replaymod
+[13:27:20] [Server thread/DEBUG] [FML]: Bar Step: ServerStopped - Replay Mod took 0.000s
+[13:27:20] [Server thread/TRACE] [FML]: Sending event FMLServerStoppedEvent to mod raspberryjammod
+[13:27:20] [Server thread/TRACE] [FML]: Sent event FMLServerStoppedEvent to mod raspberryjammod
+[13:27:20] [Server thread/DEBUG] [FML]: Bar Step: ServerStopped - Raspberry Jam Mod took 0.000s
+[13:27:20] [Server thread/DEBUG] [FML]: Bar Finished: ServerStopped took 0.001s
+[13:27:23] [Client thread/INFO] [net.minecraft.client.Minecraft]: Stopping!
+[13:27:23] [Client thread/INFO] [net.minecraft.client.audio.SoundManager]: SoundSystem shutting down...
+[13:27:24] [Client thread/WARN] [net.minecraft.client.audio.SoundManager]: Author: Paul Lamb, www.paulscode.com
