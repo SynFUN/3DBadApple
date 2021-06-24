@@ -5,19 +5,7 @@
     },
     "done": true
   },
-  "minecraft:recipes/redstone/dropper": {
-    "criteria": {
-      "has_redstone": "2021-05-30 01:51:11 +0800"
-    },
-    "done": true
-  },
   "minecraft:recipes/tools/clock": {
-    "criteria": {
-      "has_redstone": "2021-05-30 01:51:11 +0800"
-    },
-    "done": true
-  },
-  "minecraft:recipes/redstone/piston": {
     "criteria": {
       "has_redstone": "2021-05-30 01:51:11 +0800"
     },
@@ -26,6 +14,12 @@
   "minecraft:recipes/redstone/redstone_torch": {
     "criteria": {
       "has_redstone": "2021-05-30 01:51:11 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/dark_oak_boat": {
+    "criteria": {
+      "entered_water": "2021-06-02 17:06:53 +0800"
     },
     "done": true
   },
@@ -44,6 +38,48 @@
   "minecraft:recipes/tools/compass": {
     "criteria": {
       "has_redstone": "2021-05-30 01:51:11 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/birch_boat": {
+    "criteria": {
+      "entered_water": "2021-06-02 17:06:53 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/acacia_boat": {
+    "criteria": {
+      "entered_water": "2021-06-02 17:06:53 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/dropper": {
+    "criteria": {
+      "has_redstone": "2021-05-30 01:51:11 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/piston": {
+    "criteria": {
+      "has_redstone": "2021-05-30 01:51:11 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/boat": {
+    "criteria": {
+      "entered_water": "2021-06-02 17:06:53 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/jungle_boat": {
+    "criteria": {
+      "entered_water": "2021-06-02 17:06:53 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/spruce_boat": {
+    "criteria": {
+      "entered_water": "2021-06-02 17:06:53 +0800"
     },
     "done": true
   },
