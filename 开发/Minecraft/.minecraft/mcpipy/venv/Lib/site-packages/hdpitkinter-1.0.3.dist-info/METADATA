@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: hdpitkinter
+Version: 1.0.3
+Summary: Sharpen blurry Tkinter scaling on Windows 10 high DPI displays
+Home-page: https://github.com/not-dev/high-dpi-tkinter
+License: MIT License
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+
+<!-- ![](./res/) -->
+
+# High-DPI-Tkinter
+
+Sharpen blurry Tkinter scaling on Windows 10 high DPI displays
+
+## Installation
+
+Install using pip
+
+```sh
+pip install hdpitkinter
+```
+
+## Usage
+
+Replace tkinter.Tk() to hdpitkinter.HdpiTk()
+
+```python
+# from tkinter import Tk
+from hdpitkinter import HdpiTk
+
+# root = Tk()
+root = HdpiTk()
+# After that use like Tk instance
+root.mainloop()
+```
+
+## License
+
+MIT License
+
+## Thanks
+
+<https://stackoverflow.com/questions/41315873/attempting-to-resolve-blurred-tkinter-text-scaling-on-windows-10-high-dpi-disp>
+
+

@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: docal-tkinter
+Version: 3.0.0
+Summary: GUI implementation of docal with Tkinter
+Home-page: https://github.com/K1DV5/docal-tkinter
+Author: Kidus Adugna
+Author-email: kidusadugna@gmail.com
+License: MIT license
+Keywords: docal,tkinter,math,latex,word
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
+
+# docal-tkinter
+
+This is a GUI for docal implemented in tkinter, and uses the new tkinter-math library to render the math.
+
+## Installation
+
+* A standalone installer and a portable archive are provided for Windows in releases.
+* For other systems (also Windows), you can install it on top of Python with
+  ```shell
+  pip install --update docal_tkinter
+  ```
+  Then
+  ```shell
+  python -m docal_tkinter
+  ```
+
+

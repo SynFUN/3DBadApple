@@ -1,0 +1,3 @@
+examples
+matplotlib_backend_qtquick
+tests

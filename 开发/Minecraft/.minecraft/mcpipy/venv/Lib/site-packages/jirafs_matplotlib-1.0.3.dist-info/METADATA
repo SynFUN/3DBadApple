@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: jirafs-matplotlib
+Version: 1.0.3
+Summary: Render matplotlib charts in your JIRA issues 
+Home-page: https://github.com/coddingtonbear/jirafs-matplotlib
+Author: Adam Coddington
+Author-email: me@adamcoddington.net
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+
+UNKNOWN
+
+

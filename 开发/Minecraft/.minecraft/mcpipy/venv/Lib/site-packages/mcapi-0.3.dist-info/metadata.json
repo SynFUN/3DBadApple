@@ -1,0 +1,1 @@
+{"name": "mcapi", "metadata_version": "2.0", "generator": "bdist_wheel (0.24.0)", "summary": "Simple mc api library", "run_requires": [{"requires": ["requests"]}], "version": "0.3", "extensions": {"python.details": {"document_names": {"description": "DESCRIPTION.rst"}, "contacts": [{"role": "author", "email": "deaygo@thezomg.com", "name": "Deaygo"}]}}, "extras": []}
