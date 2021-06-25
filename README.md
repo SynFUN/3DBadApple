@@ -1,9 +1,9 @@
 # 【Minecraft】玄学渲染，BadApple顺利起飞
 
-[![2021-06-22-17-34-58.png](https://i.postimg.cc/zGRsFKR5/2021-06-22-17-34-58.png)](https://www.bilibili.com/video/av846340047)
+[![2021-06-22-17-34-58.png](https://i.postimg.cc/zGRsFKR5/2021-06-22-17-34-58.png)](https://www.bilibili.com/video/BV1Ww411o77g/)
 
 各种视频都可以用此程序实现同样效果。↓整合包下载链接，闲者可以试试。
-[整合包 （P2赠50秒小白教学)](https://github.com/SynthesisDu/MC_BadAppleDGDH/releases/tag/v1.0)
+[整合包 （视频含50秒小白教学)](https://github.com/SynthesisDu/MC_BadAppleDGDH/releases/tag/v1.0)
 [借物 (地图存档) Azuma no Niwa](https://www.planetminecraft.com/project/garden-of-the-east-3583394/)
 可惜车万主题的地图大小都不太合适，所以最后用了这个东亚风的景观图。
 
