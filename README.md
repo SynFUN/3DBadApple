@@ -1,4 +1,4 @@
-# 【Minecraft】玄学渲染，BadApple顺利起飞
+# 【Minecraft】把BadApple三维展开（附程序+整合包）
 
 [![2021-06-22-17-34-58.png](https://i.postimg.cc/zGRsFKR5/2021-06-22-17-34-58.png)](https://www.bilibili.com/video/BV1Ww411o77g/)
 
