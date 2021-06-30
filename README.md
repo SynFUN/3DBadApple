@@ -1,6 +1,6 @@
 # 【Minecraft】把BadApple三维展开（附程序+整合包）
 
-[![2021-06-22-17-34-58.png](https://i.postimg.cc/zGRsFKR5/2021-06-22-17-34-58.png)](https://www.bilibili.com/video/BV1Ww411o77g/)
+[![gh.png](https://i.postimg.cc/x1SLbdcH/gh.png)](https://www.bilibili.com/video/BV1Ww411o77g)
 
 
 [整合包 （视频含50秒小白教学)](https://github.com/SynthesisDu/MC_BadAppleDGDH/releases/tag/v1.0)
