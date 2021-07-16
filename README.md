@@ -71,3 +71,4 @@ JVM爆了好几次内存，后来给Python加了调整了休眠时间，JVM才�
 以下会注明整合包里外挂的一些文件。将这里注明的所有文件搬到别的【.minecraft】里去也可以正常运作。具体功能可以查看首页的README.
 
 [![5.png](https://i.postimg.cc/nV10jcPz/5.png)](https://postimg.cc/14fpbPPh)
+
