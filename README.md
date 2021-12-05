@@ -1,5 +1,9 @@
 # 【Minecraft】把BadApple三维展开（附程序+整合包）
 
+12.3万播放 · 总弹幕数156 2021-06-25 15:15:06
+
+(Origion 123,000 views. Also upload to [youtube](https://www.youtube.com/watch?v=BdwJXk_KJ6Y&t=3s))
+
 [![gh.png](https://i.postimg.cc/x1SLbdcH/gh.png)](https://www.bilibili.com/video/BV1Ww411o77g)
 
 
