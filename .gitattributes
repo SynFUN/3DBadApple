@@ -2,3 +2,10 @@
 *.json linguist-language=java
 *.cfg linguist-language=java
 *.sha linguist-language=java
+*.db linguist-language=java
+*.sql linguist-language=java
+*.png linguist-language=java
+*.pxd linguist-language=java
+*.c linguist-language=java
+*.h linguist-language=java
+*.tex linguist-language=java
